@@ -27,24 +27,20 @@ const HeroSection = () => {
       <div className="container-wide relative z-10 pt-24">
         <div className="max-w-3xl">
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight mb-8 animate-slide-up">
-            <span className="text-gradient">O Agro</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4 animate-slide-up">
+            <span className="text-gradient">O Agro conectado ao futuro:</span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-foreground mb-4 animate-slide-up delay-100">
-            Insights Inteligentes,
-          </h2>
-          
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-foreground mb-8 animate-slide-up delay-200">
-            Decisões Sustentáveis
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-foreground mb-8 animate-slide-up delay-100">
+            Insights Inteligentes, Decisões Sustentáveis
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-6 animate-slide-up delay-300">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-6 animate-slide-up delay-200">
             {t.hero.subtitle}
           </p>
           
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl animate-slide-up delay-400">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl animate-slide-up delay-300">
             Assumimos os desafios dos nossos clientes como nossos, desenvolvendo projetos e soluções sob medida que impulsionam negócios e fortalecem decisões estratégicas.
           </p>
         </div>
