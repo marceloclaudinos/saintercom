@@ -1,7 +1,9 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { CheckCircle, TrendingUp, Zap, Award, Users, Search, BarChart3, Building2 } from 'lucide-react';
+import { CheckCircle, TrendingUp, Zap, Award, Users, Search, BarChart3, Building2, ArrowRight } from 'lucide-react';
+import heroImage from '@/assets/inteligencia-mercado.jpg';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const InteligenciaMercado = () => {
   const { t } = useLanguage();
@@ -14,27 +16,27 @@ const InteligenciaMercado = () => {
   ];
 
   const araiSteps = [
-    { step: '1', title: 'Pré-Aprovação', items: ['Briefing Inicial (NLP Analysis)', 'Design da Proposta (AIRD)'] },
-    { step: '2', title: 'Aprovação', items: ['Briefing Aprofundado (NLP Analysis)', 'Design do Instrumento de Coleta'] },
-    { step: '3', title: 'Execução', items: ['Coleta Primária (AI-powered)', 'Coleta Secundária (RAG)', 'Processamento de Dados (ML)'] },
-    { step: '4', title: 'Apresentação', items: ['Análise & Insights (AI-Driven)', 'Apresentação (AI-Results)'] },
+    { step: '1', title: 'Planejamento', subtitle: 'Pré-Aprovação', items: ['Briefing Inicial (NLP Analysis)', 'Design da Proposta (AIRD)', 'Design do Instrumento (Narrative AI)'] },
+    { step: '2', title: 'Coleta de Dados', subtitle: 'Aprovação', items: ['Briefing Aprofundado (NLP Analysis)', 'Coleta Secundária (Scraping)'] },
+    { step: '3', title: 'Tratamento & Modelagem', subtitle: 'Execução', items: ['Coleta Primária (AI-powered)', 'Modelagem (Feature Engineering)'] },
+    { step: '4', title: 'Entrega Final', subtitle: 'Apresentação', items: ['Análise & Insights (AI-Driven)', 'Tratamento (ETL e Data Lake)', 'Entrega de Resultados (AI-Results)'] },
   ];
 
   const projects = [
     {
       icon: Users,
-      title: t.intelligence.project1Title,
-      items: t.intelligence.project1Items,
+      title: 'Gestão de Relacionamento com Clientes',
+      items: ['Funil de Vendas', 'Voz do cliente – Produtor (VOCs - B2C)', 'QFD Agroindústria (VOCs - B2B)', 'Programas de Fidelização (Benchmarking)', 'Mapeamento do Potencial de Consultores (VPC)'],
     },
     {
       icon: Search,
-      title: t.intelligence.project2Title,
-      items: t.intelligence.project2Items,
+      title: 'Estudos de Mercado / GTM - Go to Market',
+      items: ['Sizing de Mercado', 'Tendências e Forecast', 'Análise Competitiva', 'Segmentação de Mercado', 'Estratégias de entrada em novas regiões', 'Mapeamento de potencial de vendas – VPM Predict Geo'],
     },
     {
       icon: Building2,
-      title: t.intelligence.project3Title,
-      items: t.intelligence.project3Items,
+      title: 'Pesquisa de Mercado',
+      items: ['Focus Group', 'Pesquisa em Profundidade (IDIs)', 'Cliente oculto (Mystery shopping)', 'Lançamento de Novos Produtos', 'Satisfação de Clientes - (NPS)', 'Tracking de Preços'],
     },
   ];
 
@@ -43,8 +45,20 @@ const InteligenciaMercado = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-green-light/10 rounded-full blur-3xl" />
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          </div>
+          
+          {/* Leaf Logo Background */}
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          </div>
+          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
@@ -54,24 +68,26 @@ const InteligenciaMercado = () => {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="text-gradient">{t.intelligence.title}</span>
+                <span className="text-gradient">S.A. Agribusiness Intelligence</span>
               </h1>
-              <p className="text-2xl text-primary font-heading font-medium mb-6">
-                {t.intelligence.tagline}
-              </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                {t.intelligence.intro}
+                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de IA, garantindo precisão, agilidade e compreensão profunda do setor.
               </p>
             </div>
           </div>
         </section>
 
         {/* Methodology */}
-        <section className="section-padding bg-background">
-          <div className="container-wide">
+        <section className="section-padding bg-background relative overflow-hidden">
+          {/* Leaf Background */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-96 h-auto" />
+          </div>
+          
+          <div className="container-wide relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                {t.intelligence.araiTitle}
+                Metodologia ARAI
               </h2>
               <p className="text-muted-foreground text-lg">
                 {t.intelligence.araiDescription}
@@ -85,9 +101,10 @@ const InteligenciaMercado = () => {
                     <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center text-primary-foreground font-bold text-xl mb-4">
                       {phase.step}
                     </div>
-                    <h3 className="text-lg font-heading font-semibold mb-4">
+                    <h3 className="text-lg font-heading font-semibold mb-1">
                       {phase.title}
                     </h3>
+                    <p className="text-sm text-primary mb-4">{phase.subtitle}</p>
                     <ul className="space-y-2">
                       {phase.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -98,7 +115,9 @@ const InteligenciaMercado = () => {
                     </ul>
                   </div>
                   {index < araiSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border" />
+                    <div className="hidden lg:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10">
+                      <ArrowRight className="w-6 h-6 text-primary" />
+                    </div>
                   )}
                 </div>
               ))}
@@ -135,10 +154,10 @@ const InteligenciaMercado = () => {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                {t.intelligence.projectsTitle}
+                Exemplos de Projetos que Desenvolvemos
               </h2>
               <p className="text-muted-foreground text-lg">
-                {t.intelligence.projectsSubtitle}
+                Inteligência de Mercado, IA e Consultoria Sênior para apoiar decisões estratégicas no Agronegócio.
               </p>
             </div>
 

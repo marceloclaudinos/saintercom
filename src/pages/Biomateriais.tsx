@@ -2,24 +2,26 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Leaf, CheckCircle, Sprout, TrendingUp, Network } from 'lucide-react';
+import heroImage from '@/assets/biomateriais-agro.png';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const Biomateriais = () => {
   const { t } = useLanguage();
 
   const services = [
-    t.biomaterials.service1,
-    t.biomaterials.service2,
-    t.biomaterials.service3,
-    t.biomaterials.service4,
-    t.biomaterials.service5,
-    t.biomaterials.service6,
+    'Identificar e priorizar bioprodutos com alto potencial de mercado',
+    'Mapear cadeias produtivas, rotas comerciais e compradores estratégicos',
+    'Analisar tendências e movimentos de mercado',
+    'Estruturar modelos de parceria e apoiar a captação de recursos e investimentos',
+    'Analisar competitividade, riscos e barreiras técnicas, regulatórias e comerciais',
+    'Definir estratégias de posicionamento às necessidades concretas do agronegócio',
   ];
 
   const pillars = [
     {
       icon: Sprout,
       title: t.biomaterials.pillar1Title,
-      description: t.biomaterials.pillar1Desc,
+      description: 'Apoio estratégico e financeiro à criação de novas tecnologias e soluções de materiais, alinhados à agenda ESG.',
     },
     {
       icon: TrendingUp,
@@ -38,8 +40,20 @@ const Biomateriais = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-green-medium/10 rounded-full blur-3xl" />
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          </div>
+          
+          {/* Leaf Logo Background */}
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          </div>
+          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
@@ -55,18 +69,26 @@ const Biomateriais = () => {
                 {t.biomaterials.tagline}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                {t.biomaterials.intro}
+                Nosso olhar estratégico se volta para novos materiais, tecnologias e soluções sustentáveis capazes de transformar resíduos, melhorar a eficiência produtiva e abrir novas fronteiras de valor no agro.
               </p>
             </div>
           </div>
         </section>
 
         {/* Description */}
-        <section className="section-padding bg-background">
-          <div className="container-wide">
+        <section className="section-padding bg-background relative overflow-hidden">
+          {/* Leaf Background */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-96 h-auto" />
+          </div>
+          
+          <div className="container-wide relative z-10">
             <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">
+                S.A. Sustainability
+              </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                {t.biomaterials.description}
+                A S.A. Sustainability, unidade de negócios da S.A. Intercom, combina mais de 30 anos de experiência no agronegócio, inteligência de mercado e parcerias estratégicas para impulsionar soluções inovadoras e sustentáveis no agro.
               </p>
             </div>
           </div>
@@ -76,7 +98,7 @@ const Biomateriais = () => {
         <section className="section-padding bg-secondary/30">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              {t.biomaterials.servicesTitle}
+              Como Apoiamos Nossos Parceiros
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {services.map((service, index) => (
@@ -95,7 +117,7 @@ const Biomateriais = () => {
         <section className="section-padding bg-gradient-hero text-primary-foreground">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              {t.biomaterials.pillarsTitle}
+              Nossos Três Pilares de Atuação
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {pillars.map((pillar, index) => (
@@ -123,7 +145,7 @@ const Biomateriais = () => {
                 S.A. Intercom – Transformando inovação em valor real para o agronegócio
               </h2>
               <p className="text-muted-foreground mb-8">
-                Combinamos 30 anos de experiência no setor agro, relacionamentos e Novas Tecnologias de materiais de resíduos agrícolas, posicionando soluções inovadoras de forma estratégica.
+                Combinamos 30 anos de experiência no setor agro, relacionamentos e novas tecnologias de materiais de resíduos agrícolas, posicionando soluções inovadoras de forma estratégica.
               </p>
             </div>
           </div>

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Language } from '@/i18n/translations';
-import logo from '@/assets/logo-sa-intercom.png';
+import logo from '@/assets/logo-sa-intercom-transparent.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,10 +33,10 @@ const Header = () => {
     { path: '/contato', label: t.nav.contact },
   ];
 
-  const languages: { code: Language; label: string; flag: string }[] = [
-    { code: 'pt', label: 'PT', flag: '🇧🇷' },
-    { code: 'en', label: 'EN', flag: '🇺🇸' },
-    { code: 'es', label: 'ES', flag: '🇪🇸' },
+  const languages: { code: Language; label: string }[] = [
+    { code: 'pt', label: 'PT' },
+    { code: 'en', label: 'EN' },
+    { code: 'es', label: 'ES' },
   ];
 
   return (
@@ -89,20 +89,20 @@ const Header = () => {
 
           {/* Language Selector & Mobile Menu */}
           <div className="flex items-center gap-4">
-            {/* Language Selector */}
+            {/* Language Selector - Text only like Horiens */}
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-secondary transition-colors"
+                className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
-                <Globe className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">
-                  {languages.find(l => l.code === language)?.flag}
-                </span>
+                <span>{language.toUpperCase()}</span>
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
               </button>
               
               {isLangOpen && (
-                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-floating overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-floating overflow-hidden z-50 min-w-[60px]">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
@@ -110,12 +110,11 @@ const Header = () => {
                         setLanguage(lang.code);
                         setIsLangOpen(false);
                       }}
-                      className={`flex items-center gap-2 w-full px-4 py-2 text-sm hover:bg-secondary transition-colors ${
-                        language === lang.code ? 'bg-secondary text-primary' : ''
+                      className={`flex items-center justify-center w-full px-4 py-2 text-sm hover:bg-secondary transition-colors ${
+                        language === lang.code ? 'bg-secondary text-primary font-medium' : ''
                       }`}
                     >
-                      <span>{lang.flag}</span>
-                      <span>{lang.label}</span>
+                      {lang.label}
                     </button>
                   ))}
                 </div>

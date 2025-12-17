@@ -24,11 +24,11 @@ export const translations = {
       subtitle: 'Três pilares que sustentam nossa missão',
       intelligence: {
         title: 'Inteligência com Propósito',
-        description: 'Entregar insights que realmente fazem diferença na vida de quem trabalha no campo.',
+        description: 'Insights que convertem dados em decisões relevantes.',
       },
       sustainability: {
         title: 'Sustentabilidade e Eficiência',
-        description: 'Fazer mais com menos: otimizar custos, tempo e energia. Apoiar práticas responsáveis e cadeias sustentáveis.',
+        description: 'O poder de transformar resíduos em recursos estratégicos.',
       },
       technology: {
         title: 'Tecnologia que Potencializa Pessoas',

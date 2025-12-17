@@ -1,5 +1,6 @@
-import { Lightbulb, Leaf, Cpu } from 'lucide-react';
+import { Lightbulb, Leaf, Building2 } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const PillarsSection = () => {
   const { t } = useLanguage();
@@ -8,34 +9,39 @@ const PillarsSection = () => {
     {
       icon: Lightbulb,
       title: t.pillars.intelligence.title,
+      subtitle: 'S.A. Agribusiness Intelligence',
       description: t.pillars.intelligence.description,
       color: 'from-green-dark to-green-primary',
     },
     {
       icon: Leaf,
       title: t.pillars.sustainability.title,
+      subtitle: 'S.A. Sustainability',
       description: t.pillars.sustainability.description,
       color: 'from-green-primary to-green-medium',
     },
     {
-      icon: Cpu,
+      icon: Building2,
       title: t.pillars.technology.title,
+      subtitle: 'S.A. Business Partner',
       description: t.pillars.technology.description,
       color: 'from-green-medium to-green-light',
     },
   ];
 
   return (
-    <section className="section-padding bg-gradient-subtle">
-      <div className="container-wide">
+    <section className="section-padding bg-gradient-subtle relative overflow-hidden">
+      {/* Background Leaf */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+        <img src={leafLogo} alt="" className="w-[500px] h-auto" />
+      </div>
+      
+      <div className="container-wide relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             {t.pillars.title}
           </h2>
-          <p className="text-muted-foreground text-lg">
-            {t.pillars.subtitle}
-          </p>
         </div>
 
         {/* Pillars Grid */}
@@ -56,9 +62,12 @@ const PillarsSection = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
                 {pillar.title}
               </h3>
+              <p className="text-sm text-primary font-medium mb-4">
+                {pillar.subtitle}
+              </p>
               <p className="text-muted-foreground leading-relaxed">
                 {pillar.description}
               </p>

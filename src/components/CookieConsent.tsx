@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Cookie } from 'lucide-react';
+import { Cookie } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const CookieConsent = () => {
@@ -16,11 +16,6 @@ const CookieConsent = () => {
 
   const handleAccept = () => {
     localStorage.setItem('sa-intercom-cookie-consent', 'accepted');
-    setIsVisible(false);
-  };
-
-  const handleConfigure = () => {
-    localStorage.setItem('sa-intercom-cookie-consent', 'configured');
     setIsVisible(false);
   };
 
@@ -49,29 +44,13 @@ const CookieConsent = () => {
             {t.cookies.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <button
-              onClick={handleAccept}
-              className="btn-primary flex-1 text-center"
-            >
-              {t.cookies.accept}
-            </button>
-            <button
-              onClick={handleConfigure}
-              className="btn-outline flex-1 text-center"
-            >
-              {t.cookies.configure}
-            </button>
-          </div>
+          <button
+            onClick={handleAccept}
+            className="btn-primary w-full text-center"
+          >
+            {t.cookies.accept}
+          </button>
         </div>
-
-        {/* Close Button */}
-        <button
-          onClick={handleConfigure}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
-        >
-          <X className="w-4 h-4 text-primary-foreground" />
-        </button>
       </div>
     </div>
   );
