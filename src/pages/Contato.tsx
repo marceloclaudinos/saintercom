@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const Contato = () => {
   const { t } = useLanguage();
@@ -20,8 +21,21 @@ const Contato = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contato via Site - ${formData.company || formData.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\n` +
+      `E-mail: ${formData.email}\n` +
+      `Telefone: ${formData.phone || 'Não informado'}\n` +
+      `Empresa: ${formData.company || 'Não informada'}\n\n` +
+      `Mensagem:\n${formData.message}`
+    );
+    
+    // Open email client with form data
+    window.location.href = `mailto:marcelo.claudino@saintercom.com.br?subject=${subject}&body=${body}`;
+    
+    // Simulate processing
+    await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
       title: t.contact.success,
@@ -39,7 +53,7 @@ const Contato = () => {
   const contactInfo = [
     { icon: MapPin, label: 'São Paulo, SP - Brasil' },
     { icon: Mail, label: 'contato@saintercom.com', href: 'mailto:contato@saintercom.com' },
-    { icon: Phone, label: '+55 11 99999-9999', href: 'tel:+5511999999999' },
+    { icon: Phone, label: '+55 (11) 99605-9833', href: 'tel:+5511996059833' },
   ];
 
   return (
@@ -48,7 +62,11 @@ const Contato = () => {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-green-light/10 rounded-full blur-3xl" />
+          {/* Leaf Logo Background */}
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          </div>
+          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
@@ -186,6 +204,22 @@ const Contato = () => {
                   <div className="flex items-center gap-2 text-sm text-green-medium mt-4">
                     <CheckCircle className="w-4 h-4" />
                     <span>Atendimento em toda América Latina</span>
+                  </div>
+                </div>
+
+                {/* D-U-N-S Section */}
+                <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
+                  <h3 className="text-lg font-heading font-semibold mb-4">
+                    Registro Internacional D-U-N-S®
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    A S.A. Intercom possui identificação global D-U-N-S®, utilizada mundialmente por empresas e instituições para processos de compliance, auditoria e qualificação de fornecedores.
+                  </p>
+                  <div className="text-sm text-muted-foreground space-y-1">
+                    <p><strong>S.A. Intercom</strong> – Santos & Santos Consultoria e Assessoria Empresarial Ltda.</p>
+                    <p>CNPJ: 08.343.129/0001-04</p>
+                    <p>D-U-N-S® Number: 898675456</p>
+                    <p className="text-xs mt-2 italic">Registro internacional corporativo mantido pela Dun & Bradstreet.</p>
                   </div>
                 </div>
               </div>

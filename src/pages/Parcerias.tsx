@@ -1,18 +1,42 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Handshake, Bot, Cog, Users, Gamepad2, Cpu, Sprout, ArrowRight } from 'lucide-react';
+import { Handshake, Bot, Cpu, ArrowRight, MessageSquare, DollarSign } from 'lucide-react';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const Parcerias = () => {
   const { t } = useLanguage();
 
-  const deliverables = [
-    { icon: Bot, title: t.partnerships.deliver1Title, description: t.partnerships.deliver1Desc },
-    { icon: Bot, title: t.partnerships.deliver2Title, description: t.partnerships.deliver2Desc },
-    { icon: Cog, title: t.partnerships.deliver3Title, description: t.partnerships.deliver3Desc },
-    { icon: Users, title: t.partnerships.deliver4Title, description: t.partnerships.deliver4Desc },
-    { icon: Gamepad2, title: t.partnerships.deliver5Title, description: t.partnerships.deliver5Desc },
-    { icon: Sprout, title: t.partnerships.deliver6Title, description: t.partnerships.deliver6Desc },
+  const partners = [
+    { 
+      icon: MessageSquare, 
+      title: 'IA Centrus', 
+      subtitle: 'Agentes Conversacionais com IA',
+      description: 'Desenvolvimento de agentes conversacionais avançados, integrados a:',
+      items: [
+        'Atendimento ao cliente',
+        'WhatsApp empresarial',
+        'SAC e suporte técnico',
+        'Automação de vendas e processos',
+        'Bots de voz e texto em linguagem natural',
+      ],
+      cta: 'A S.A. Intercom conecta empresas do Agro a soluções conversacionais preparadas para escalar atendimento, reduzir custos e melhorar experiência do cliente.',
+      link: '#'
+    },
+    { 
+      icon: DollarSign, 
+      title: 'IASelfinancial', 
+      subtitle: 'Inteligência Financeira & Open Finance',
+      description: 'Plataforma de inteligência financeira baseada em Open Finance e Inteligência Artificial, voltada à educação financeira, análise de comportamento e automação de decisões, integrada a:',
+      items: [
+        'Educação financeira digital e personalizada',
+        'Automação de recomendações financeiras',
+        'Integração segura com dados bancários (Open Finance)',
+        'Agentes conversacionais financeiros com IA',
+      ],
+      cta: 'A S.A. Intercom conecta empresas do Agro à Selfinancial, viabilizando a compreensão do comportamento financeiro de produtores, apoiando estratégias de relacionamento bancário e decisões mais sustentáveis, orientadas por dados.',
+      link: '#'
+    },
   ];
 
   return (
@@ -21,7 +45,11 @@ const Parcerias = () => {
       <main>
         {/* Hero */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-green-light/10 rounded-full blur-3xl" />
+          {/* Leaf Logo Background */}
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          </div>
+          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
@@ -34,32 +62,46 @@ const Parcerias = () => {
                 <span className="text-gradient">{t.partnerships.title}</span>
               </h1>
               <p className="text-2xl text-primary font-heading font-medium mb-6">
-                {t.partnerships.tagline}
+                Consultoria & Business Partner em IA para o Agronegócio
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                {t.partnerships.intro}
+                A S.A. Intercom atua como interface estratégica entre empresas parceiras e empresas do agronegócio, apoiando a incorporação de tecnologias emergentes, inteligência artificial, transformação digital e novos modelos de gestão nas organizações do setor.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Deliverables */}
+        {/* Partners Section */}
         <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              {t.partnerships.deliverTitle}
+              Nossos Parceiros
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {deliverables.map((item, index) => (
-                <div key={index} className="bg-card rounded-2xl p-8 shadow-subtle card-hover border border-border">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {partners.map((partner, index) => (
+                <div key={index} className="bg-card rounded-2xl p-8 shadow-subtle border border-border">
                   <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6">
-                    <item.icon className="w-7 h-7 text-primary-foreground" />
+                    <partner.icon className="w-7 h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-heading font-semibold mb-4">
-                    {item.title}
+                  <h3 className="text-2xl font-heading font-semibold mb-2">
+                    {partner.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {item.description}
+                  <p className="text-primary font-medium mb-4">
+                    {partner.subtitle}
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    {partner.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {partner.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-medium mt-2 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground italic border-t border-border pt-4">
+                    {partner.cta}
                   </p>
                 </div>
               ))}
@@ -76,7 +118,7 @@ const Parcerias = () => {
                 {t.partnerships.roleTitle}
               </h2>
               <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
-                {t.partnerships.roleDesc}
+                Somos o elo entre empresas parceiras de conhecimento, inovação e impacto, levando para o agronegócio soluções que reduzem custos, aumentam eficiência e elevam a competitividade.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 {['Conectamos tecnologia ao agro', 'Parceiros globais validados', 'IA para acelerar decisões', 'Projetos reais e escaláveis'].map((item, index) => (

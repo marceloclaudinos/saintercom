@@ -1,17 +1,19 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Building2, Target, Eye, Heart, CheckCircle, Sprout, Beef, Zap, Store } from 'lucide-react';
+import { Building2, Target, Eye, Heart, CheckCircle, Sprout, Beef, Zap, Store, Tractor } from 'lucide-react';
+import heroImage from '@/assets/empresa-hero.jpeg';
+import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
 const Empresa = () => {
   const { t } = useLanguage();
 
   const highlights = [
-    t.company.experience,
-    t.company.team,
-    t.company.expertise,
-    t.company.focus,
-    t.company.cost,
+    '30+ anos de experiência em Inteligência de Mercado Agro',
+    'Equipe sênior: Agrônomos, Estatísticos, Consultores Especialistas, AI Specialist',
+    'Empresa com expertise em IA - Escritório em São Paulo + Labs de IA na Califórnia (Berkeley)',
+    'Foco exclusivo: Agronegócio na América Latina',
+    'Estrutura enxuta e Processos eficientes, focados na análise e na Qualidade da informação',
   ];
 
   const values = [
@@ -22,17 +24,25 @@ const Empresa = () => {
   ];
 
   const segments = [
-    { icon: Sprout, title: t.company.segment1, items: t.company.segment1Items },
-    { icon: Beef, title: t.company.segment2, items: t.company.segment2Items },
-    { icon: Zap, title: t.company.segment3, items: t.company.segment3Items },
-    { icon: Store, title: t.company.segment4, items: [] },
+    { icon: Sprout, title: 'Agricultura & Insumos', items: ['Proteção de Cultivos', 'Fertilizantes & Nutrição Vegetal', 'Sementes & Biotecnologia Agrícola'] },
+    { icon: Beef, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição', 'Pecuária de Corte', 'Aves, Suínos e Pets'] },
+    { icon: Zap, title: 'Energia & Recursos Naturais', items: ['Biocombustíveis', 'Operações Agrícolas'] },
+    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão'] },
+    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
   ];
 
   const whyUs = [
-    t.company.why1,
-    t.company.why2,
-    t.company.why3,
-    t.company.why4,
+    'Inteligência de mercado com profundidade e experiência sênior',
+    'Conexão estratégica com empresas inovadoras',
+    'Consultores que conhecem o campo e o cliente',
+    'Entregas rápidas, completas e voltadas para resultados',
+  ];
+
+  const valueBlocks = [
+    { title: 'S.A. Intelligence — Excelência Analítica', desc: 'Atuamos com profundidade analítica, visão estratégica e qualidade da informação.' },
+    { title: 'S.A. Sustainability — Sustentabilidade com Viabilidade', desc: 'Conectamos bioeconomia, biomassa e soluções sustentáveis escaláveis no agronegócio.' },
+    { title: 'S.A. Business Partner — Conexões que Geram Transformação', desc: 'Atuamos como elo estratégico entre empresas inovadoras, adoção de novas tecnologias, IA e práticas modernas de sustentabilidade.' },
+    { title: 'Valor Transversal — Ética, Governança e Confiança', desc: 'Operamos com ética, transparência, governança de dados de clientes, parceiros e ao mercado.' },
   ];
 
   return (
@@ -40,8 +50,20 @@ const Empresa = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          </div>
+          
+          {/* Leaf Logo Background */}
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          </div>
+          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
@@ -116,17 +138,38 @@ const Empresa = () => {
           </div>
         </section>
 
-        {/* Segments */}
+        {/* Values Blocks */}
         <section className="section-padding bg-secondary/30">
+          <div className="container-wide">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
+              Valores
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {valueBlocks.map((block, index) => (
+                <div key={index} className="bg-card rounded-xl p-6 shadow-subtle">
+                  <h3 className="text-lg font-heading font-semibold text-primary mb-2">
+                    {block.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {block.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Segments */}
+        <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
               {t.company.segmentsTitle}
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {segments.map((segment, index) => (
                 <div key={index} className="bg-card rounded-2xl p-6 shadow-subtle text-center">
                   <segment.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-heading font-semibold mb-4">
+                  <h3 className="text-base font-heading font-semibold mb-4">
                     {segment.title}
                   </h3>
                   {segment.items.length > 0 && (
