@@ -190,21 +190,6 @@ const Contato = () => {
                   ))}
                 </div>
 
-                <div className="mt-12 p-6 bg-secondary rounded-2xl">
-                  <h3 className="text-lg font-heading font-semibold mb-4">
-                    Nosso Escritório
-                  </h3>
-                  <p className="text-muted-foreground mb-2">
-                    São Paulo, SP - Brasil
-                  </p>
-                  <p className="text-muted-foreground mb-2">
-                    + Labs de IA na Califórnia (Berkeley)
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-green-medium mt-4">
-                    <CheckCircle className="w-4 h-4" />
-                    <span>Atendimento em toda América Latina</span>
-                  </div>
-                </div>
 
                 {/* D-U-N-S Section */}
                 <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
