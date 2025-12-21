@@ -43,8 +43,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-effect shadow-elevated py-2'
-          : 'bg-transparent py-4'
+          ? 'bg-background/95 backdrop-blur-md shadow-elevated py-2'
+          : 'bg-background/60 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container-wide">
@@ -69,11 +69,11 @@ const Header = () => {
                 }`}
               >
                 <div className="flex flex-col items-center">
-                  <span className="text-xs font-heading font-bold tracking-wider uppercase transition-colors group-hover:text-primary drop-shadow-sm">
+                  <span className="text-sm font-heading font-extrabold tracking-wider uppercase transition-colors group-hover:text-primary" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
                     {item.label}
                   </span>
                   {item.sub && (
-                    <span className="text-[10px] font-body text-foreground/80 font-medium mt-0.5 drop-shadow-sm">
+                    <span className="text-[10px] font-body text-foreground font-semibold mt-0.5" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
                       {item.sub}
                     </span>
                   )}
