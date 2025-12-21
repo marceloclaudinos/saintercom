@@ -79,7 +79,7 @@ const Empresa = () => {
                 {highlights.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-medium mt-0.5 shrink-0" />
-                    <p className="text-lg text-muted-foreground">{item}</p>
+                    <p className="text-lg text-foreground">{item}</p>
                   </div>
                 ))}
               </div>
