@@ -39,9 +39,9 @@ const Biomateriais = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          {/* Background Image */}
+        {/* Hero - Same height as Home */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image - Full coverage */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})` }}
@@ -49,12 +49,12 @@ const Biomateriais = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
           </div>
           
-          {/* Leaf Logo Background */}
-          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          {/* Leaf Logo - Top right, smaller */}
+          <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-32 h-auto" />
           </div>
           
-          <div className="container-wide relative z-10">
+          <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
                 <Leaf className="w-4 h-4 text-green-medium" />

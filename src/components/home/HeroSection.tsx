@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
       </div>
       
-      {/* Background Leaf Logo */}
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+      {/* Background Leaf Logo - repositioned to top right, smaller */}
+      <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
         <img
           src={leafLogo}
           alt=""
-          className="w-96 h-auto"
+          className="w-32 h-auto"
         />
       </div>
 
@@ -35,12 +35,8 @@ const HeroSection = () => {
             Insights Inteligentes, Decisões Sustentáveis
           </h2>
 
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-6 animate-slide-up delay-200">
-            {t.hero.subtitle}
-          </p>
-          
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl animate-slide-up delay-300">
+          {/* Subtitle - same dark palette as h2 */}
+          <p className="text-base md:text-lg text-foreground max-w-2xl animate-slide-up delay-200">
             Assumimos os desafios dos nossos clientes como nossos, desenvolvendo projetos e soluções sob medida que impulsionam negócios e fortalecem decisões estratégicas.
           </p>
         </div>
