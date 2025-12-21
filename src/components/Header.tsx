@@ -65,15 +65,15 @@ const Header = () => {
                 key={item.path}
                 to={item.path}
                 className={`relative px-4 py-3 group ${
-                  location.pathname === item.path ? 'text-primary' : 'text-foreground/80'
+                  location.pathname === item.path ? 'text-primary' : 'text-foreground'
                 }`}
               >
                 <div className="flex flex-col items-center">
-                  <span className="text-xs font-heading font-semibold tracking-wider uppercase transition-colors group-hover:text-primary">
+                  <span className="text-xs font-heading font-bold tracking-wider uppercase transition-colors group-hover:text-primary drop-shadow-sm">
                     {item.label}
                   </span>
                   {item.sub && (
-                    <span className="text-[10px] font-body text-muted-foreground font-light mt-0.5">
+                    <span className="text-[10px] font-body text-foreground/80 font-medium mt-0.5 drop-shadow-sm">
                       {item.sub}
                     </span>
                   )}
@@ -93,7 +93,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="flex items-center gap-1 px-2 py-1 text-sm font-bold text-foreground hover:text-primary transition-colors drop-shadow-sm"
               >
                 <span>{language.toUpperCase()}</span>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
