@@ -74,10 +74,10 @@ const Parcerias = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                 <span className="text-gradient">{t.partnerships.title}</span>
               </h1>
-              <p className="text-2xl text-primary font-heading font-medium mb-6">
+              <p className="text-2xl text-foreground font-heading font-medium mb-6">
                 Consultoria & Business Partner em IA para o Agronegócio
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              <p className="text-lg text-foreground leading-relaxed max-w-3xl">
                 A S.A. Intercom atua como interface estratégica entre empresas parceiras e empresas do agronegócio, apoiando a incorporação de tecnologias emergentes, inteligência artificial, transformação digital e novos modelos de gestão nas organizações do setor.
               </p>
             </div>

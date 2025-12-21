@@ -75,13 +75,13 @@ const InteligenciaMercado = () => {
               </h1>
               
               {/* Tagline */}
-              <p className="text-xl md:text-2xl text-primary font-heading font-medium mb-6">
+              <p className="text-xl md:text-2xl text-foreground font-heading font-medium mb-6">
                 Made for humans. Powered by AI.
               </p>
               
-              {/* Main description - bold black */}
-              <p className="text-lg md:text-xl text-foreground font-semibold leading-relaxed max-w-3xl">
-                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de <span className="text-primary font-bold">Pesquisa e Inteligência de Mercado</span>, entregando análises completas, rápidas e com excelente custo-benefício.
+              {/* Main description */}
+              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl">
+                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de Pesquisa e Inteligência de Mercado, entregando análises completas, rápidas e com excelente custo-benefício.
               </p>
             </div>
           </div>
