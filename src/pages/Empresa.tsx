@@ -56,7 +56,7 @@ const Empresa = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-transparent" />
           </div>
           
           {/* Leaf Logo Background */}
