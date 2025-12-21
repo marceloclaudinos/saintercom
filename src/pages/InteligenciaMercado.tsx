@@ -44,34 +44,44 @@ const InteligenciaMercado = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          {/* Background Image */}
+        {/* Hero - Same height as Home */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image - Full coverage */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
           </div>
           
-          {/* Leaf Logo Background */}
-          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-64 h-auto" />
+          {/* Leaf Logo - Top right, smaller */}
+          <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-32 h-auto" />
           </div>
           
-          <div className="container-wide relative z-10">
+          <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-                <BarChart3 className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  {t.intelligence.subtitle}
+              {/* Small leaf + S.A. Agribusiness Intelligence */}
+              <div className="flex items-center gap-3 mb-4">
+                <img src={leafLogo} alt="" className="w-10 h-auto" />
+                <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
+                  S.A. Agribusiness Intelligence
                 </span>
               </div>
+              
+              {/* Main Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="text-gradient">S.A. Agribusiness Intelligence</span>
+                <span className="text-gradient">INTELIGÊNCIA DE MERCADO</span>
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de IA, garantindo precisão, agilidade e compreensão profunda do setor.
+              
+              {/* Tagline */}
+              <p className="text-xl md:text-2xl text-primary font-heading font-medium mb-6">
+                Made for humans. Powered by AI.
+              </p>
+              
+              {/* Main description - bold black */}
+              <p className="text-lg md:text-xl text-foreground font-semibold leading-relaxed max-w-3xl">
+                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de <span className="text-primary font-bold">Pesquisa e Inteligência de Mercado</span>, entregando análises completas, rápidas e com excelente custo-benefício.
               </p>
             </div>
           </div>

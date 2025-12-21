@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import logo from '@/assets/logo-sa-intercom-transparent.png';
 import dunsLogo from '@/assets/duns-certificate.jpeg';
-import { Linkedin, Mail, Phone, MapPin, Instagram, Youtube } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -90,12 +90,6 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-green-light" />
                 <a href="mailto:contato@saintercom.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
                   contato@saintercom.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-green-light" />
-                <a href="tel:+5511996059833" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                  +55 (11) 99605-9833
                 </a>
               </div>
             </div>

@@ -1,8 +1,11 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Handshake, Bot, Cpu, ArrowRight, MessageSquare, DollarSign } from 'lucide-react';
+import { Handshake, Cpu, ArrowRight, MessageSquare, DollarSign } from 'lucide-react';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
+import heroImage from '@/assets/parcerias-agro.png';
+import logoCentrus from '@/assets/logo-centrus-ai.png';
+import logoSelfinancial from '@/assets/selfinancial-logo.jpg';
 
 const Parcerias = () => {
   const { t } = useLanguage();
@@ -12,6 +15,7 @@ const Parcerias = () => {
       icon: MessageSquare, 
       title: 'IA Centrus', 
       subtitle: 'Agentes Conversacionais com IA',
+      logo: logoCentrus,
       description: 'Desenvolvimento de agentes conversacionais avançados, integrados a:',
       items: [
         'Atendimento ao cliente',
@@ -27,6 +31,7 @@ const Parcerias = () => {
       icon: DollarSign, 
       title: 'IASelfinancial', 
       subtitle: 'Inteligência Financeira & Open Finance',
+      logo: logoSelfinancial,
       description: 'Plataforma de inteligência financeira baseada em Open Finance e Inteligência Artificial, voltada à educação financeira, análise de comportamento e automação de decisões, integrada a:',
       items: [
         'Educação financeira digital e personalizada',
@@ -43,14 +48,22 @@ const Parcerias = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* Hero */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-green-pale via-background to-secondary relative overflow-hidden">
-          {/* Leaf Logo Background */}
-          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-64 h-auto" />
+        {/* Hero - Same height as Home */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image - Full coverage */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
           </div>
           
-          <div className="container-wide relative z-10">
+          {/* Leaf Logo - Top right, smaller */}
+          <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-32 h-auto" />
+          </div>
+          
+          <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
                 <Handshake className="w-4 h-4 text-primary" />
@@ -80,15 +93,24 @@ const Parcerias = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-card rounded-2xl p-8 shadow-subtle border border-border">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6">
-                    <partner.icon className="w-7 h-7 text-primary-foreground" />
+                  {/* Partner Logo */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center p-2">
+                      <img 
+                        src={partner.logo} 
+                        alt={partner.title} 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-heading font-semibold">
+                        {partner.title}
+                      </h3>
+                      <p className="text-primary font-medium">
+                        {partner.subtitle}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-heading font-semibold mb-2">
-                    {partner.title}
-                  </h3>
-                  <p className="text-primary font-medium mb-4">
-                    {partner.subtitle}
-                  </p>
                   <p className="text-muted-foreground mb-4">
                     {partner.description}
                   </p>
