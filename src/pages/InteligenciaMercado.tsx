@@ -48,8 +48,8 @@ const InteligenciaMercado = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image - Full coverage */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${heroImage})` }}
+            className="absolute inset-0 bg-cover bg-no-repeat"
+            style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right 30% top 20%' }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
           </div>
