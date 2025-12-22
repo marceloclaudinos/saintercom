@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Recycle, Handshake } from 'lucide-react';
+import { ArrowRight, BrainCircuit, Recycle, Handshake } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const ServicesSection = () => {
@@ -7,7 +7,7 @@ const ServicesSection = () => {
 
   const services = [
     {
-      icon: BarChart3,
+      icon: BrainCircuit,
       title: t.nav.intelligence,
       subtitle: t.nav.intelligenceSub,
       description: t.services?.intelligenceDesc || 'Combinamos a expertise profunda de quem conhece o campo com IA para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
