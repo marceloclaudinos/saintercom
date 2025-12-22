@@ -51,7 +51,7 @@ const InteligenciaMercado = () => {
             className="absolute inset-0 bg-cover bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right 30% top 20%' }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
           </div>
           
           {/* Leaf Logo - Top right, smaller */}
