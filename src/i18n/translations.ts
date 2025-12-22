@@ -35,6 +35,12 @@ export const translations = {
         description: 'IA para acelerar, organizar e ampliar a análise — nunca para substituir a visão humana.',
       },
     },
+    services: {
+      sectionTitle: 'Onde atuamos para o Agronegócio',
+      intelligenceDesc: 'Combinamos a expertise profunda de quem conhece o campo com IA para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
+      biomaterialsDesc: 'Desenvolvimento de mercado para soluções sustentáveis e bioeconomia. Conexão entre inovação, ciência e impacto real no campo.',
+      partnershipsDesc: 'Conexão com soluções emergentes, plataformas de produtividade e parceiros globais em IA.',
+    },
     map: {
       title: 'Atuação na América Latina',
       subtitle: 'Realizando projetos de pesquisa e análise em toda América Latina',
@@ -198,6 +204,12 @@ export const translations = {
         description: 'AI to accelerate, organize, and expand analysis — never to replace human vision.',
       },
     },
+    services: {
+      sectionTitle: 'Where we work for Agribusiness',
+      intelligenceDesc: 'We combine the deep expertise of those who know the field with AI to deliver Market Research and Intelligence projects with excellence, agility, and value.',
+      biomaterialsDesc: 'Market development for sustainable solutions and bioeconomy. Connection between innovation, science, and real impact in the field.',
+      partnershipsDesc: 'Connection with emerging solutions, productivity platforms, and global AI partners.',
+    },
     map: {
       title: 'Operations in Latin America',
       subtitle: 'Conducting research and analysis projects throughout Latin America',
@@ -360,6 +372,12 @@ export const translations = {
         title: 'Tecnología que Potencia Personas',
         description: 'IA para acelerar, organizar y ampliar el análisis — nunca para reemplazar la visión humana.',
       },
+    },
+    services: {
+      sectionTitle: 'Donde actuamos para el Agronegocio',
+      intelligenceDesc: 'Combinamos la experiencia profunda de quienes conocen el campo con IA para entregar proyectos de Investigación e Inteligencia de Mercado con excelencia, agilidad y valor.',
+      biomaterialsDesc: 'Desarrollo de mercado para soluciones sostenibles y bioeconomía. Conexión entre innovación, ciencia e impacto real en el campo.',
+      partnershipsDesc: 'Conexión con soluciones emergentes, plataformas de productividad y socios globales en IA.',
     },
     map: {
       title: 'Actuación en América Latina',
