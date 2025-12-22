@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart3, Recycle, Handshake } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
-import inteligMercadoIcon from '@/assets/intelig-mercado.jpg';
-import bioprodAgroIcon from '@/assets/bioprod-agro-icon.jpg';
-import parcAgroIcon from '@/assets/parc-agro-icon.png';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
 
   const services = [
     {
-      icon: inteligMercadoIcon,
+      icon: BarChart3,
       title: t.nav.intelligence,
       subtitle: t.nav.intelligenceSub,
       description: t.services?.intelligenceDesc || 'Combinamos a expertise profunda de quem conhece o campo com IA para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
@@ -18,7 +15,7 @@ const ServicesSection = () => {
       gradient: 'from-green-dark to-green-primary',
     },
     {
-      icon: bioprodAgroIcon,
+      icon: Recycle,
       title: t.nav.biomaterials,
       subtitle: t.nav.biomaterialsSub,
       description: t.services?.biomaterialsDesc || 'Desenvolvimento de mercado para soluções sustentáveis e bioeconomia. Conexão entre inovação, ciência e impacto real no campo.',
@@ -26,7 +23,7 @@ const ServicesSection = () => {
       gradient: 'from-green-primary to-green-medium',
     },
     {
-      icon: parcAgroIcon,
+      icon: Handshake,
       title: t.nav.partnerships,
       subtitle: t.nav.partnershipsSub,
       description: t.services?.partnershipsDesc || 'Conexão com soluções emergentes, plataformas de produtividade e parceiros globais em IA.',
@@ -56,11 +53,7 @@ const ServicesSection = () => {
                 {/* Header */}
                 <div className={`p-8 bg-gradient-to-br ${service.gradient}`}>
                   <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur-sm">
-                    <img 
-                      src={service.icon} 
-                      alt={service.title} 
-                      className="w-10 h-10 object-contain brightness-0 invert"
-                    />
+                    <service.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
                     {service.title}
