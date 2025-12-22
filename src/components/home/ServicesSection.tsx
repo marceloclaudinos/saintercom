@@ -1,32 +1,35 @@
 import { Link } from 'react-router-dom';
-import { BarChart3, Leaf, Handshake, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import inteligMercadoIcon from '@/assets/intelig-mercado.jpg';
+import bioprodAgroIcon from '@/assets/bioprod-agro-icon.jpg';
+import parcAgroIcon from '@/assets/parc-agro-icon.png';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
 
   const services = [
     {
-      icon: BarChart3,
+      icon: inteligMercadoIcon,
       title: t.nav.intelligence,
       subtitle: t.nav.intelligenceSub,
-      description: t.intelligence.intro,
+      description: t.services?.intelligenceDesc || 'Combinamos a expertise profunda de quem conhece o campo com IA para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
       link: '/inteligencia-mercado',
       gradient: 'from-green-dark to-green-primary',
     },
     {
-      icon: Leaf,
+      icon: bioprodAgroIcon,
       title: t.nav.biomaterials,
       subtitle: t.nav.biomaterialsSub,
-      description: t.biomaterials.intro,
+      description: t.services?.biomaterialsDesc || 'Desenvolvimento de mercado para soluções sustentáveis e bioeconomia. Conexão entre inovação, ciência e impacto real no campo.',
       link: '/biomateriais',
       gradient: 'from-green-primary to-green-medium',
     },
     {
-      icon: Handshake,
+      icon: parcAgroIcon,
       title: t.nav.partnerships,
       subtitle: t.nav.partnershipsSub,
-      description: t.partnerships.intro,
+      description: t.services?.partnershipsDesc || 'Conexão com soluções emergentes, plataformas de produtividade e parceiros globais em IA.',
       link: '/parcerias',
       gradient: 'from-green-medium to-green-light',
     },
@@ -52,7 +55,13 @@ const ServicesSection = () => {
               <div className="h-full bg-card rounded-2xl overflow-hidden shadow-subtle hover:shadow-floating transition-all duration-500 card-hover">
                 {/* Header */}
                 <div className={`p-8 bg-gradient-to-br ${service.gradient}`}>
-                  <service.icon className="w-12 h-12 text-primary-foreground mb-4" />
+                  <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur-sm">
+                    <img 
+                      src={service.icon} 
+                      alt={service.title} 
+                      className="w-10 h-10 object-contain brightness-0 invert"
+                    />
+                  </div>
                   <h3 className="text-xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
                     {service.title}
                   </h3>
