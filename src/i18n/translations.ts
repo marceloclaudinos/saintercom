@@ -31,8 +31,8 @@ export const translations = {
         description: 'O poder de transformar resíduos em recursos estratégicos.',
       },
       technology: {
-        title: 'Tecnologia que Potencializa Pessoas',
-        description: 'IA para acelerar, organizar e ampliar a análise — nunca para substituir a visão humana.',
+        title: 'Parcerias que Potencializam Empresas',
+        description: 'Onde empresas se conectam para compartilhar tecnologia e crescimento sustentável.',
       },
     },
     services: {
@@ -193,15 +193,15 @@ export const translations = {
       subtitle: 'Three pillars that sustain our mission',
       intelligence: {
         title: 'Intelligence with Purpose',
-        description: 'Delivering insights that truly make a difference in the lives of those working in the field.',
+        description: 'Insights that convert data into relevant decisions.',
       },
       sustainability: {
         title: 'Sustainability and Efficiency',
-        description: 'Doing more with less: optimizing costs, time, and energy. Supporting responsible practices and sustainable chains.',
+        description: 'The power to transform waste into strategic resources.',
       },
       technology: {
-        title: 'Technology that Empowers People',
-        description: 'AI to accelerate, organize, and expand analysis — never to replace human vision.',
+        title: 'Partnerships that Empower Companies',
+        description: 'Where companies connect to share technology and sustainable growth.',
       },
     },
     services: {
@@ -362,15 +362,15 @@ export const translations = {
       subtitle: 'Tres pilares que sustentan nuestra misión',
       intelligence: {
         title: 'Inteligencia con Propósito',
-        description: 'Entregar insights que realmente hacen diferencia en la vida de quienes trabajan en el campo.',
+        description: 'Insights que convierten datos en decisiones relevantes.',
       },
       sustainability: {
         title: 'Sustentabilidad y Eficiencia',
-        description: 'Hacer más con menos: optimizar costos, tiempo y energía. Apoyar prácticas responsables y cadenas sustentables.',
+        description: 'El poder de transformar residuos en recursos estratégicos.',
       },
       technology: {
-        title: 'Tecnología que Potencia Personas',
-        description: 'IA para acelerar, organizar y ampliar el análisis — nunca para reemplazar la visión humana.',
+        title: 'Alianzas que Potencian Empresas',
+        description: 'Donde las empresas se conectan para compartir tecnología y crecimiento sostenible.',
       },
     },
     services: {
