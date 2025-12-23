@@ -37,7 +37,7 @@ const ServicesSection = () => {
       <div className="container-wide">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
             {t.services?.sectionTitle || 'Onde atuamos para o Agronegócio'}
           </h2>
         </div>
