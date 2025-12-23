@@ -52,8 +52,7 @@ const MapSection = () => {
               <img
                 src={mapaLatam}
                 alt="Latin America Map"
-                className="w-full max-w-md mx-auto object-contain"
-                style={{ objectPosition: 'center' }}
+                className="w-full max-w-lg mx-auto object-contain scale-110 translate-y-4"
               />
             </div>
 
