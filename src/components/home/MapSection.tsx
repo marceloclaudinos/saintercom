@@ -47,12 +47,12 @@ const MapSection = () => {
           </div>
 
           {/* Map */}
-          <div className="relative">
+          <div className="relative overflow-visible">
             <div className="relative animate-float">
               <img
                 src={mapaLatam}
                 alt="Latin America Map"
-                className="w-full max-w-lg mx-auto object-contain scale-110 translate-y-4"
+                className="w-full max-w-sm mx-auto object-contain"
               />
             </div>
 
