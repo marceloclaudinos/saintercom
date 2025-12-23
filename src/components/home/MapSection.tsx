@@ -55,20 +55,6 @@ const MapSection = () => {
                 className="w-full max-w-md mx-auto object-contain"
                 style={{ objectPosition: 'center' }}
               />
-              
-              {/* Pulse dots on map - adjusted positions */}
-              <div className="absolute top-[30%] left-[45%] w-4 h-4">
-                <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
-                <span className="relative block w-4 h-4 rounded-full bg-primary" />
-              </div>
-              <div className="absolute top-[50%] left-[55%] w-3 h-3">
-                <span className="absolute inset-0 rounded-full bg-green-medium animate-ping opacity-75 delay-300" />
-                <span className="relative block w-3 h-3 rounded-full bg-green-medium" />
-              </div>
-              <div className="absolute top-[65%] left-[48%] w-3 h-3">
-                <span className="absolute inset-0 rounded-full bg-green-light animate-ping opacity-75 delay-500" />
-                <span className="relative block w-3 h-3 rounded-full bg-green-light" />
-              </div>
             </div>
 
             {/* Decorative circle */}
