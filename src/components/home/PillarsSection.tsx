@@ -1,27 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import leafLogo from '@/assets/logo-folha-sa.png';
 
-const PillarIcon = () => (
-  <svg 
-    viewBox="0 0 64 64" 
-    className="w-16 h-16"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-  >
-    {/* Base */}
-    <rect x="8" y="56" width="48" height="4" rx="1" className="fill-current" />
-    {/* Top */}
-    <rect x="6" y="8" width="52" height="4" rx="1" className="fill-current" />
-    {/* Columns */}
-    <rect x="14" y="12" width="4" height="44" className="fill-current" />
-    <rect x="26" y="12" width="4" height="44" className="fill-current" />
-    <rect x="38" y="12" width="4" height="44" className="fill-current" />
-    <rect x="50" y="12" width="4" height="44" className="fill-current" />
-    {/* Top decoration */}
-    <path d="M6 8 Q32 2 58 8" strokeWidth="2" className="stroke-current" />
-  </svg>
-);
+import pilarIcon from '@/assets/pilar_home.png';
 
 const LeafDecoration = () => (
   <img 
@@ -93,8 +73,8 @@ const PillarsSection = () => {
               {pillar.hasLeaf && <LeafDecoration />}
 
               {/* Pillar Icon */}
-              <div className={`text-primary mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <PillarIcon />
+              <div className="flex justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <img src={pilarIcon} alt="" className="w-16 h-16 object-contain" />
               </div>
 
               {/* Content */}
