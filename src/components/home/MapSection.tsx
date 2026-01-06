@@ -1,5 +1,5 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import mapaLatam from '@/assets/mapa-latam-full.png';
+import mapaLatam from '@/assets/mapa-latam-globe.png';
 
 const MapSection = () => {
   const { t } = useLanguage();
