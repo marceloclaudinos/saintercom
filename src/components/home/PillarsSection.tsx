@@ -45,11 +45,11 @@ const PillarsSection = () => {
       <div className="container-wide relative z-10">
         {/* Section Header with Leaf */}
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <div className="flex items-center justify-center gap-1 mb-4">
+          <div className="flex items-center justify-center mb-4">
             <img 
               src={leafLogo} 
               alt="" 
-              className="w-28 h-32 md:w-32 md:h-36 object-contain"
+              className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               {t.pillars.title}
