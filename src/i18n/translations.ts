@@ -8,7 +8,7 @@ export const translations = {
       intelligenceSub: 'S.A. Agribusiness Intelligence',
       biomaterials: 'BIOMATERIAIS DO AGRO',
       biomaterialsSub: 'S.A. Sustainability',
-      partnerships: 'PARCERIAS PARA O AGRO',
+      partnerships: 'PARCERIAS NO AGRO',
       partnershipsSub: 'S.A. Business Partner',
       company: 'A EMPRESA',
       contact: 'CONTATO',
@@ -107,7 +107,7 @@ export const translations = {
       pillar3Desc: 'Conexão entre empresas, startups, centros de pesquisa, cooperativas e produtores.',
     },
     partnerships: {
-      title: 'PARCERIAS PARA O AGRO',
+      title: 'PARCERIAS NO AGRO',
       subtitle: 'S.A. Business Partner',
       tagline: 'Consultoria & Business Partner em IA para o Agronegócio',
       intro: 'A S.A. Intercom atua como parceira estratégica apoiando setores das empresas do agronegócio na adoção de tecnologias emergentes, inteligência artificial, transformação digital e novas práticas de gestão.',
