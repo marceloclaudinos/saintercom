@@ -59,7 +59,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1 ml-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -69,11 +69,11 @@ const Header = () => {
                 }`}
               >
                 <div className="flex flex-col items-center">
-                  <span className="text-sm font-heading font-extrabold tracking-wider uppercase transition-colors group-hover:text-primary" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
+                  <span className="text-xs font-heading font-extrabold tracking-wider uppercase transition-colors group-hover:text-primary" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
                     {item.label}
                   </span>
                   {item.sub && (
-                    <span className="text-[10px] font-body text-foreground font-semibold mt-0.5" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
+                    <span className="text-[9px] font-body text-foreground font-semibold mt-0.5" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.8)' }}>
                       {item.sub}
                     </span>
                   )}
@@ -93,7 +93,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1 px-2 py-1 text-sm font-bold text-foreground hover:text-primary transition-colors drop-shadow-sm"
+                className="flex items-center gap-1 px-2 py-1 text-[10px] font-bold text-foreground hover:text-primary transition-colors drop-shadow-sm"
               >
                 <span>{language.toUpperCase()}</span>
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

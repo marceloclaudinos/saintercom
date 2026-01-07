@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Lightbulb, Recycle, Handshake } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
+import leafLogo from '@/assets/logo-folha-transparent.png';
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -37,9 +38,16 @@ const ServicesSection = () => {
       <div className="container-wide">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-            {t.services?.sectionTitle || 'Onde atuamos para o Agronegócio'}
-          </h2>
+          <div className="flex items-center justify-center gap-4">
+            <img 
+              src={leafLogo} 
+              alt="" 
+              className="w-16 h-20 md:w-20 md:h-24 object-contain"
+            />
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+              {t.services?.sectionTitle || 'Onde atuamos'}
+            </h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
