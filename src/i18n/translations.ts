@@ -27,7 +27,7 @@ export const translations = {
         description: 'Insights que convertem dados em decisões relevantes.',
       },
       sustainability: {
-        title: 'Sustentabilidade e Eficiência',
+        title: 'Biomateriais Sustentáveis',
         description: 'O poder de transformar resíduos em recursos estratégicos.',
       },
       technology: {
@@ -36,14 +36,14 @@ export const translations = {
       },
     },
     services: {
-      sectionTitle: 'Onde atuamos para o Agronegócio',
-      intelligenceDesc: 'Combinamos a expertise profunda de quem conhece o campo com IA para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
+      sectionTitle: 'Onde atuamos',
+      intelligenceDesc: 'Combinamos a expertise profunda de quem conhece o campo com a I.A. para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
       biomaterialsDesc: 'Desenvolvimento de mercado para soluções sustentáveis e bioeconomia. Conexão entre inovação, ciência e impacto real no campo.',
       partnershipsDesc: 'Conexão com soluções emergentes, plataformas de produtividade e parceiros globais em IA.',
     },
     map: {
       title: 'Atuação na América Latina',
-      subtitle: 'Realizando projetos de pesquisa e análise em toda América Latina',
+      subtitle: 'Realizamos projetos em toda América Latina',
       stat1: '30+',
       stat1Label: 'Anos de Experiência',
       stat2: '35+',
@@ -196,7 +196,7 @@ export const translations = {
         description: 'Insights that convert data into relevant decisions.',
       },
       sustainability: {
-        title: 'Sustainability and Efficiency',
+        title: 'Sustainable Biomaterials',
         description: 'The power to transform waste into strategic resources.',
       },
       technology: {
@@ -205,14 +205,14 @@ export const translations = {
       },
     },
     services: {
-      sectionTitle: 'Where we work for Agribusiness',
-      intelligenceDesc: 'We combine the deep expertise of those who know the field with AI to deliver Market Research and Intelligence projects with excellence, agility, and value.',
+      sectionTitle: 'Where we work',
+      intelligenceDesc: 'We combine the deep expertise of those who know the field with A.I. to deliver Market Research and Intelligence projects with excellence, agility, and value.',
       biomaterialsDesc: 'Market development for sustainable solutions and bioeconomy. Connection between innovation, science, and real impact in the field.',
       partnershipsDesc: 'Connection with emerging solutions, productivity platforms, and global AI partners.',
     },
     map: {
       title: 'Operations in Latin America',
-      subtitle: 'Conducting research and analysis projects throughout Latin America',
+      subtitle: 'We carry out projects across Latin America',
       stat1: '30+',
       stat1Label: 'Years of Experience',
       stat2: '35+',
@@ -365,7 +365,7 @@ export const translations = {
         description: 'Insights que convierten datos en decisiones relevantes.',
       },
       sustainability: {
-        title: 'Sustentabilidad y Eficiencia',
+        title: 'Biomateriales Sostenibles',
         description: 'El poder de transformar residuos en recursos estratégicos.',
       },
       technology: {
@@ -374,14 +374,14 @@ export const translations = {
       },
     },
     services: {
-      sectionTitle: 'Donde actuamos para el Agronegocio',
-      intelligenceDesc: 'Combinamos la experiencia profunda de quienes conocen el campo con IA para entregar proyectos de Investigación e Inteligencia de Mercado con excelencia, agilidad y valor.',
+      sectionTitle: 'Donde actuamos',
+      intelligenceDesc: 'Combinamos la experiencia profunda de quienes conocen el campo con la I.A. para entregar proyectos de Investigación e Inteligencia de Mercado con excelencia, agilidad y valor.',
       biomaterialsDesc: 'Desarrollo de mercado para soluciones sostenibles y bioeconomía. Conexión entre innovación, ciencia e impacto real en el campo.',
       partnershipsDesc: 'Conexión con soluciones emergentes, plataformas de productividad y socios globales en IA.',
     },
     map: {
       title: 'Actuación en América Latina',
-      subtitle: 'Realizando proyectos de investigación y análisis en toda América Latina',
+      subtitle: 'Realizamos proyectos en toda América Latina',
       stat1: '30+',
       stat1Label: 'Años de Experiencia',
       stat2: '35+',

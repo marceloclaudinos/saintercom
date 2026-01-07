@@ -1,5 +1,5 @@
 import { useLanguage } from '@/i18n/LanguageContext';
-import leafLogo from '@/assets/logo-folha-sa.png';
+import leafLogo from '@/assets/logo-folha-transparent.png';
 
 import pilarIcon from '@/assets/pilar_home.png';
 
@@ -44,12 +44,12 @@ const PillarsSection = () => {
       
       <div className="container-wide relative z-10">
         {/* Section Header with Leaf */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <img 
               src={leafLogo} 
               alt="" 
-              className="w-20 h-24 md:w-28 md:h-32 object-contain"
+              className="w-16 h-20 md:w-20 md:h-24 object-contain"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               {t.pillars.title}
