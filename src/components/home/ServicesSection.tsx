@@ -59,18 +59,16 @@ const ServicesSection = () => {
             >
               <div className="h-full bg-card rounded-2xl overflow-hidden shadow-subtle hover:shadow-floating transition-all duration-500 card-hover flex flex-col">
                 {/* Header */}
-                <div className={`p-8 bg-gradient-to-br ${service.gradient} min-h-[180px] flex flex-col justify-between`}>
+                <div className={`p-8 bg-gradient-to-br ${service.gradient} h-[200px]`}>
                   <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur-sm">
                     <service.icon className="w-8 h-8 text-primary-foreground" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-heading font-bold text-primary-foreground uppercase tracking-wide">
-                      {service.title}
-                    </h3>
-                    <p className="text-primary-foreground/80 text-sm mt-1">
-                      {service.subtitle}
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-heading font-bold text-primary-foreground uppercase tracking-wide min-h-[56px] flex items-end">
+                    {service.title}
+                  </h3>
+                  <p className="text-primary-foreground/80 text-sm mt-1">
+                    {service.subtitle}
+                  </p>
                 </div>
 
                 {/* Content */}
