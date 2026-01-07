@@ -37,8 +37,8 @@ const ServicesSection = () => {
     <section className="section-padding bg-secondary/30">
       <div className="container-wide">
         {/* Section Title */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-2">
+        <div className="text-center mb-4">
+          <div className="flex items-center justify-center gap-1">
             <img 
               src={leafLogo} 
               alt="" 

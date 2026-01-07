@@ -45,7 +45,7 @@ const PillarsSection = () => {
       <div className="container-wide relative z-10">
         {/* Section Header with Leaf */}
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="flex items-center justify-center gap-1 mb-4">
             <img 
               src={leafLogo} 
               alt="" 
