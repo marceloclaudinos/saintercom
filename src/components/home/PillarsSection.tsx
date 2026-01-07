@@ -49,7 +49,7 @@ const PillarsSection = () => {
             <img 
               src={leafLogo} 
               alt="" 
-              className="w-20 h-24 md:w-24 md:h-28 object-contain"
+              className="w-28 h-32 md:w-32 md:h-36 object-contain"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               {t.pillars.title}

@@ -42,7 +42,7 @@ const ServicesSection = () => {
             <img 
               src={leafLogo} 
               alt="" 
-              className="w-20 h-24 md:w-24 md:h-28 object-contain"
+              className="w-28 h-32 md:w-32 md:h-36 object-contain"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               {t.services?.sectionTitle || 'Onde atuamos'}
@@ -57,7 +57,7 @@ const ServicesSection = () => {
               to={service.link}
               className="group block"
             >
-              <div className="h-full bg-card rounded-2xl overflow-hidden shadow-subtle hover:shadow-floating transition-all duration-500 card-hover">
+              <div className="h-full bg-card rounded-2xl overflow-hidden shadow-subtle hover:shadow-floating transition-all duration-500 card-hover flex flex-col">
                 {/* Header */}
                 <div className={`p-8 bg-gradient-to-br ${service.gradient}`}>
                   <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 backdrop-blur-sm">
@@ -72,8 +72,8 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                <div className="p-8 flex flex-col flex-grow">
+                  <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
                   <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">

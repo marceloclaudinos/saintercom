@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
-import logo from '@/assets/logo-sa-intercom-color.png';
+import logo from '@/assets/logo-folha-transparent.png';
 import dunsLogo from '@/assets/duns-certificate.jpeg';
 import { Linkedin, Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 
@@ -17,7 +17,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="S.A. Intercom"
-              className="h-16 mb-4"
+              className="h-20 w-auto mb-4"
             />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
               O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis.
