@@ -42,7 +42,7 @@ const ServicesSection = () => {
             <img 
               src={leafLogo} 
               alt="" 
-              className="w-16 h-20 md:w-20 md:h-24 object-contain"
+              className="w-20 h-24 md:w-24 md:h-28 object-contain"
             />
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               {t.services?.sectionTitle || 'Onde atuamos'}
@@ -73,7 +73,7 @@ const ServicesSection = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <p className="text-muted-foreground leading-relaxed line-clamp-4 mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
