@@ -44,8 +44,8 @@ const InteligenciaMercado = () => {
           <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
               {/* Small leaf + S.A. Agribusiness Intelligence */}
-              <div className="flex items-center gap-3 mb-4">
-                <img src={leafLogo} alt="" className="w-10 h-auto" />
+              <div className="flex items-center mb-4">
+                <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
                 <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
                   S.A. Agribusiness Intelligence
                 </span>
