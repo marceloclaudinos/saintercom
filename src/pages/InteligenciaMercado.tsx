@@ -108,9 +108,9 @@ const InteligenciaMercado = () => {
                 <div key={index} className="relative">
                   <div className="bg-card rounded-2xl p-6 shadow-subtle h-full border border-border">
                     {/* Leaf with number */}
-                    <div className="relative w-16 h-16 mb-4">
-                      <img src={leafLogo} alt="" className="w-16 h-16 object-contain" />
-                      <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] -translate-y-0.5">
+                    <div className="relative w-20 h-20 mb-4">
+                      <img src={leafLogo} alt="" className="w-20 h-20 object-contain" />
+                      <span className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                         {phase.step}
                       </span>
                     </div>
