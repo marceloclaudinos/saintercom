@@ -94,8 +94,8 @@ const InteligenciaMercado = () => {
           </div>
           
           <div className="container-wide relative z-10">
-            <div className="text-center max-w-4xl mx-auto mb-16">
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
                 Fases de um Projeto de Pesquisa e Inteligência de Mercado
               </h2>
               <p className="text-muted-foreground text-lg">
