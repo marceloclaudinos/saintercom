@@ -98,7 +98,7 @@ const InteligenciaMercado = () => {
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
                 Fases de um Projeto de Pesquisa e Inteligência de Mercado
               </h2>
-              <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
+              <p className="text-muted-foreground text-lg">
                 (com a Metodologia ARAI)
               </p>
             </div>
