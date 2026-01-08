@@ -110,7 +110,7 @@ const InteligenciaMercado = () => {
                     {/* Leaf with number */}
                     <div className="relative w-20 h-20 mb-4">
                       <img src={leafLogo} alt="" className="w-20 h-20 object-contain" />
-                      <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                      <span className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                         {phase.step}
                       </span>
                     </div>
