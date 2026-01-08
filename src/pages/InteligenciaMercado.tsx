@@ -72,8 +72,8 @@ const InteligenciaMercado = () => {
         {/* New Section - S.A. Agribusiness Intelligence */}
         <section className="section-padding bg-secondary/30">
           <div className="container-wide">
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <img src={leafLogo} alt="" className="w-12 h-auto -mr-2" />
+            <div className="flex items-center justify-center mb-8">
+              <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
                 S.A. Agribusiness Intelligence
               </h2>
