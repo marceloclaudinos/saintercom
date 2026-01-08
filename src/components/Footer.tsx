@@ -32,7 +32,7 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/SA_INTERCOM"
+                href="https://www.instagram.com/sa_intecom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
