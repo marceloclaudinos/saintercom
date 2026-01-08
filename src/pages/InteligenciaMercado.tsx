@@ -31,7 +31,7 @@ const InteligenciaMercado = () => {
           {/* Background Image - Full coverage with lower position to show faces */}
           <div 
             className="absolute inset-0 bg-cover bg-no-repeat"
-            style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right 30% top 35%' }}
+            style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right 30% top 50%' }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
           </div>
