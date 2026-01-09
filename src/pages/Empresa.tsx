@@ -75,7 +75,7 @@ const Empresa = () => {
                     <item.icon className="w-5 h-5 text-primary mt-1 shrink-0" />
                     <div>
                       <p className="text-base font-semibold text-foreground">{item.title}</p>
-                      <p className="text-sm text-muted-foreground font-semibold">{item.description}</p>
+                      <p className="text-sm text-foreground font-semibold">{item.description}</p>
                     </div>
                   </div>
                 ))}
