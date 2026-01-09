@@ -150,7 +150,7 @@ const Biomateriais = () => {
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">
                 S.A. Intercom – Transformando inovação em valor real para o agronegócio
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground text-lg mb-8">
                 Combinamos 30 anos de experiência no setor agro, relacionamentos e novas tecnologias de materiais de resíduos agrícolas, posicionando soluções inovadoras de forma estratégica.
               </p>
             </div>
