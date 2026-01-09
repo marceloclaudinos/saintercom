@@ -173,13 +173,6 @@ const Contato = () => {
               {/* Info */}
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-6">
-                  {/* Logo */}
-                  <img 
-                    src={saIntercomLogo} 
-                    alt="S.A. Intercom" 
-                    className="h-24 w-auto shrink-0"
-                  />
-                  
                   {/* Contact Info */}
                   <div className="space-y-4">
                     {contactInfo.map((item, index) => (
@@ -199,6 +192,13 @@ const Contato = () => {
                       </div>
                     ))}
                   </div>
+                  
+                  {/* Logo */}
+                  <img 
+                    src={saIntercomLogo} 
+                    alt="S.A. Intercom" 
+                    className="h-24 w-auto shrink-0"
+                  />
                 </div>
 
 
