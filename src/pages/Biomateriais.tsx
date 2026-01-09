@@ -70,7 +70,7 @@ const Biomateriais = () => {
               <p className="text-xl md:text-2xl text-foreground font-heading font-medium mb-6">
                 {t.biomaterials.tagline}
               </p>
-              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
                 Nosso olhar estratégico se volta para novos materiais, tecnologias e soluções sustentáveis capazes de transformar resíduos, melhorar a eficiência produtiva e abrir novas fronteiras de valor no agro.
               </p>
             </div>
