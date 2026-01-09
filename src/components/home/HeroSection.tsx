@@ -36,7 +36,7 @@ const HeroSection = () => {
           </h2>
 
           {/* Subtitle - same dark palette as h2 */}
-          <p className="text-base md:text-lg text-foreground max-w-2xl animate-slide-up delay-200">
+          <p className="text-base md:text-lg text-foreground max-w-2xl animate-slide-up delay-200 font-semibold">
             Assumimos os desafios dos nossos clientes como nossos, desenvolvendo projetos e soluções sob medida que impulsionam negócios e fortalecem decisões estratégicas.
           </p>
         </div>

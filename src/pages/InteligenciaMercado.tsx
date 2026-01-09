@@ -62,7 +62,7 @@ const InteligenciaMercado = () => {
               </p>
               
               {/* Main description */}
-              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
                 Combinamos a expertise profunda de quem conhece o campo com a I.A. para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.
               </p>
             </div>
