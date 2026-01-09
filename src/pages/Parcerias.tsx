@@ -1,8 +1,8 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Handshake, Cpu, ArrowRight, MessageSquare, DollarSign } from 'lucide-react';
-import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
+import { Handshake, MessageSquare, DollarSign } from 'lucide-react';
+import leafLogo from '@/assets/logo-transparent-sem-texto.png';
 import heroImage from '@/assets/parcerias-agro.png';
 import logoCentrus from '@/assets/logo-centrus-ai.png';
 import logoSelfinancial from '@/assets/selfinancial-logo.jpg';
@@ -65,20 +65,44 @@ const Parcerias = () => {
           
           <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-                <Handshake className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  {t.partnerships.subtitle}
+              {/* Small leaf + S.A. Business Partner */}
+              <div className="flex items-center mb-4">
+                <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
+                <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
+                  S.A. Business Partner
                 </span>
               </div>
+              
+              {/* Main Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                 <span className="text-gradient">{t.partnerships.title}</span>
               </h1>
-              <p className="text-2xl text-foreground font-heading font-medium mb-6">
-                Consultoria & Business Partner em IA para o Agronegócio
+              
+              {/* Tagline */}
+              <p className="text-xl md:text-2xl text-foreground font-heading font-medium mb-6">
+                Conectando empresas inovadoras às demandas do agronegócio
               </p>
-              <p className="text-lg text-foreground leading-relaxed max-w-3xl">
+              
+              {/* Main description */}
+              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl">
                 A S.A. Intercom atua como interface estratégica entre empresas parceiras e empresas do agronegócio, apoiando a incorporação de tecnologias emergentes, inteligência artificial, transformação digital e novos modelos de gestão nas organizações do setor.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* New Section - S.A. Business Partner */}
+        <section className="section-padding bg-secondary/30">
+          <div className="container-wide">
+            <div className="flex items-center justify-center mb-8">
+              <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                S.A. Business Partner
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Somos o elo entre empresas parceiras de conhecimento, inovação e impacto, levando para o agronegócio soluções que reduzem custos, aumentam eficiência e elevam a competitividade.
               </p>
             </div>
           </div>
@@ -127,29 +151,6 @@ const Parcerias = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Role */}
-        <section className="section-padding bg-gradient-hero text-primary-foreground">
-          <div className="container-wide">
-            <div className="max-w-3xl mx-auto text-center">
-              <Cpu className="w-16 h-16 mx-auto mb-8 opacity-80" />
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                {t.partnerships.roleTitle}
-              </h2>
-              <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
-                Somos o elo entre empresas parceiras de conhecimento, inovação e impacto, levando para o agronegócio soluções que reduzem custos, aumentam eficiência e elevam a competitividade.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
-                {['Conectamos tecnologia ao agro', 'Parceiros globais validados', 'IA para acelerar decisões', 'Projetos reais e escaláveis'].map((item, index) => (
-                  <div key={index} className="flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 rounded-full">
-                    <ArrowRight className="w-4 h-4" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
