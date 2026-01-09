@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Building2, Target, Eye, Heart, CheckCircle, Sprout, Beef, Zap, Store, Tractor } from 'lucide-react';
+import { Target, Eye, Heart, CheckCircle, Store, Zap, Tractor, Sprout, Beef, Calendar, Users, Building2, Focus, Award } from 'lucide-react';
 import heroImage from '@/assets/empresa-hero.jpeg';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 
@@ -9,11 +9,11 @@ const Empresa = () => {
   const { t } = useLanguage();
 
   const highlights = [
-    '30+ anos de experiência em Inteligência de Mercado Agro',
-    'Equipe sênior: Agrônomos, Estatísticos, Consultores Especialistas, AI Specialist',
-    'Empresa com expertise em IA - Escritório em São Paulo + Labs de IA na Califórnia (Berkeley)',
-    'Foco exclusivo: Agronegócio na América Latina',
-    'Estrutura enxuta e Processos eficientes, focados na análise e na Qualidade da informação',
+    { icon: Calendar, title: '30+ anos de experiência', description: 'Experiência em Inteligência de Mercado Agro.' },
+    { icon: Users, title: 'Equipe sênior', description: 'Agrônomos, Estatísticos, Entrevistadores Campo, Consultores Especialistas, AI Specialist.' },
+    { icon: Building2, title: 'Empresa com expertise em IA', description: 'Escritório em São Paulo + Labs de IA na Califórnia (Berkeley).' },
+    { icon: Focus, title: 'Foco exclusivo', description: 'Agronegócio na América Latina.' },
+    { icon: Award, title: 'Melhor Custo/Benefício', description: 'Estrutura enxuta e Processos eficientes, focados na análise e na Qualidade da informação.' },
   ];
 
   const values = [
@@ -24,18 +24,18 @@ const Empresa = () => {
   ];
 
   const segments = [
+    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
+    { icon: Zap, title: 'Energia, Bioeconomia & Recursos Naturais', items: ['Biocombustíveis', 'Energias Renováveis', 'Biomassa'] },
+    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão', 'Equipamentos para Operações Agrícolas'] },
     { icon: Sprout, title: 'Agricultura & Insumos', items: ['Proteção de Cultivos', 'Fertilizantes & Nutrição Vegetal', 'Sementes & Biotecnologia Agrícola'] },
     { icon: Beef, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição', 'Pecuária de Corte', 'Aves, Suínos e Pets'] },
-    { icon: Zap, title: 'Energia & Recursos Naturais', items: ['Biocombustíveis', 'Operações Agrícolas'] },
-    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão'] },
-    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
   ];
 
   const whyUs = [
-    'Inteligência de mercado com profundidade e experiência sênior',
-    'Conexão estratégica com empresas inovadoras',
-    'Consultores que conhecem o campo e o cliente',
-    'Entregas rápidas, completas e voltadas para resultados',
+    'Mais de 30 anos de atuação no agronegócio, combinando pesquisa de campo, análise estratégica e leitura real do mercado para decisões mais assertivas.',
+    'Atuamos como elo entre o agronegócio e empresas de tecnologia, IA, transformação digital e novos modelos de gestão, acelerando a adoção de inovação no setor.',
+    'Sustentabilidade conectada a negócios viáveis — Estruturamos e posicionamos soluções sustentáveis e de bioeconomia com foco em mercado, escala industrial, parcerias e retorno econômico.',
+    'Visão integrada do ecossistema agroindustrial — Do produtor à indústria, da inovação ao mercado, entregamos soluções completas que conectam dados, tecnologia, sustentabilidade e estratégia.',
   ];
 
   const valueBlocks = [
@@ -66,20 +66,17 @@ const Empresa = () => {
           
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-6">
-                <Building2 className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  {t.company.subtitle}
-                </span>
-              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8">
                 <span className="text-gradient">{t.company.title}</span>
               </h1>
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {highlights.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-medium mt-0.5 shrink-0" />
-                    <p className="text-lg text-foreground">{item}</p>
+                  <div key={index} className="flex items-start gap-4">
+                    <item.icon className="w-5 h-5 text-primary mt-1 shrink-0" />
+                    <div>
+                      <p className="text-base font-semibold text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -163,7 +160,7 @@ const Empresa = () => {
         <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              {t.company.segmentsTitle}
+              Segmentos de Atuação no Agronegócio
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {segments.map((segment, index) => (
@@ -173,9 +170,9 @@ const Empresa = () => {
                     {segment.title}
                   </h3>
                   {segment.items.length > 0 && (
-                    <ul className="text-sm text-muted-foreground space-y-1">
+                    <ul className="text-sm text-muted-foreground space-y-1 text-left">
                       {segment.items.map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={i}>• {item}</li>
                       ))}
                     </ul>
                   )}
