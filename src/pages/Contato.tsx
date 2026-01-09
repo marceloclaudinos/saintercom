@@ -5,6 +5,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
+import saIntercomLogo from '@/assets/logo-transparent-SA-Intercom.png';
 
 const Contato = () => {
   const { t } = useLanguage();
@@ -52,7 +53,7 @@ const Contato = () => {
 
   const contactInfo = [
     { icon: MapPin, label: 'São Paulo, SP - Brasil' },
-    { icon: Mail, label: 'contato@saintercom.com', href: 'mailto:contato@saintercom.com' },
+    { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br' },
   ];
 
   return (
@@ -84,7 +85,7 @@ const Contato = () => {
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Form */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle border border-border">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formspree.io/f/mwvewvrj" method="POST" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -171,23 +172,33 @@ const Contato = () => {
 
               {/* Info */}
               <div className="flex flex-col justify-center">
-                <div className="space-y-8">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center shrink-0">
-                        <item.icon className="w-6 h-6 text-primary-foreground" />
+                <div className="flex items-center gap-6">
+                  {/* Logo */}
+                  <img 
+                    src={saIntercomLogo} 
+                    alt="S.A. Intercom" 
+                    className="h-24 w-auto shrink-0"
+                  />
+                  
+                  {/* Contact Info */}
+                  <div className="space-y-4">
+                    {contactInfo.map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center shrink-0">
+                          <item.icon className="w-5 h-5 text-primary-foreground" />
+                        </div>
+                        <div>
+                          {item.href ? (
+                            <a href={item.href} className="text-base hover:text-primary transition-colors">
+                              {item.label}
+                            </a>
+                          ) : (
+                            <p className="text-base">{item.label}</p>
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        {item.href ? (
-                          <a href={item.href} className="text-lg hover:text-primary transition-colors">
-                            {item.label}
-                          </a>
-                        ) : (
-                          <p className="text-lg">{item.label}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
 
 
