@@ -46,7 +46,7 @@ const Biomateriais = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${heroImage})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/50" />
           </div>
           
           {/* Leaf Logo - Top right, smaller */}
