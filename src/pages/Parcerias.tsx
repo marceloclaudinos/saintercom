@@ -84,7 +84,7 @@ const Parcerias = () => {
               </p>
               
               {/* Main description */}
-              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
                 A S.A. Intercom atua como interface estratégica entre empresas parceiras e empresas do agronegócio, apoiando a incorporação de tecnologias emergentes, inteligência artificial, transformação digital e novos modelos de gestão nas organizações do setor.
               </p>
             </div>
