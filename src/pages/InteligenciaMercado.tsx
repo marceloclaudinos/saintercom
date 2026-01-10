@@ -4,6 +4,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/inteligencia-mercado.jpg';
 import leafLogo from '@/assets/logo-folha-only.png';
+import colorLeafLogo from '@/assets/logo-transparent-sem-texto.png';
 
 const InteligenciaMercado = () => {
   const { t } = useLanguage();
@@ -63,7 +64,7 @@ const InteligenciaMercado = () => {
               
               {/* Main description */}
               <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
-                Combinamos a expertise profunda de quem conhece o campo com a I.A. para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.
+                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de Pesquisa e Inteligência de Mercado, entregando análises completas, rápidas e com excelente custo-benefício.
               </p>
             </div>
           </div>
@@ -80,7 +81,7 @@ const InteligenciaMercado = () => {
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de IA, garantindo precisão, agilidade e compreensão profunda do setor.
+                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de Inteligência Artificial, garantindo precisão, agilidade e compreensão profunda do setor.
               </p>
             </div>
           </div>
@@ -96,10 +97,10 @@ const InteligenciaMercado = () => {
           <div className="container-wide relative z-10">
             <div className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                Fases de um Projeto de Pesquisa e Inteligência de Mercado
+                Fases de um Projeto com a Metodologia "ARAI":
               </h2>
               <p className="text-muted-foreground text-lg">
-                (com a Metodologia ARAI)
+                (ARAI - Agile Research with A.I.)
               </p>
             </div>
 
@@ -140,8 +141,8 @@ const InteligenciaMercado = () => {
         {/* Benefits */}
         <section className="section-padding bg-gradient-hero text-primary-foreground">
           <div className="container-wide">
-            <div className="flex items-center justify-center gap-3 mb-16">
-              <img src={leafLogo} alt="" className="w-10 h-auto -mr-2 brightness-0 invert" />
+            <div className="flex items-center justify-center mb-16">
+              <img src={colorLeafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">
                 Benefícios e Diferenciais
               </h2>
