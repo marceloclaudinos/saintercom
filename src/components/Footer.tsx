@@ -13,13 +13,13 @@ const Footer = () => {
       <div className="container-wide py-8 md:py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
-          <div className="lg:col-span-1 flex flex-col items-center">
+          <div className="lg:col-span-1 flex flex-col items-center lg:items-start">
             <img
               src={logo}
               alt="S.A. Intercom"
-              className="h-28 w-auto"
+              className="h-28 w-auto mb-3"
             />
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center -mt-1">
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center lg:text-left">
               O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis.
             </p>
             <div className="flex gap-3">
