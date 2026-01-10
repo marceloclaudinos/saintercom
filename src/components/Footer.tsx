@@ -14,12 +14,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="lg:col-span-1 flex flex-col items-center lg:items-start">
-            <img
-              src={logo}
-              alt="S.A. Intercom"
-              className="h-28 w-auto mb-3"
-            />
-            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center lg:text-left">
+            <div className="flex justify-center lg:justify-start w-full">
+              <img
+                src={logo}
+                alt="S.A. Intercom"
+                className="h-28 w-auto"
+              />
+            </div>
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center lg:text-left -mt-1">
               O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis.
             </p>
             <div className="flex gap-3">
