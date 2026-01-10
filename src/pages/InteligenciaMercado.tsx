@@ -16,10 +16,10 @@ const InteligenciaMercado = () => {
   ];
 
   const araiSteps = [
-    { step: '1', title: 'Planejamento', items: ['Briefing (NLP)', 'Design (Narrative AI)'] },
-    { step: '2', title: 'Coleta', items: ['Primária (AI-powered)', 'Secundária (Scraping)'] },
-    { step: '3', title: 'Modelagem', items: ['ETL & Data Lake', 'Feature Engineering'] },
-    { step: '4', title: 'Entrega', items: ['Insights (AI-Driven)', 'Resultados (AI-Results)'] },
+    { step: '1', title: 'Planejamento', items: ['Briefing Aprofundado (NLP Analysis)', 'Design do Instrumento (Narrative AI)'] },
+    { step: '2', title: 'Coleta de Dados', items: ['Coleta Primária (AI-powered)', 'Coleta Secundária (Scraping)'] },
+    { step: '3', title: 'Tratamento & Modelagem', items: ['Tratamento (ETL & Data Lake)', 'Modelagem (Feature Engineering)'] },
+    { step: '4', title: 'Entrega Final', items: ['Análise & Insights (AI-Driven)', 'Entrega de Resultados (AI-Results)'] },
   ];
 
   return (
@@ -63,7 +63,7 @@ const InteligenciaMercado = () => {
               
               {/* Main description */}
               <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
-                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de Pesquisa e Inteligência de Mercado, entregando análises completas, rápidas e com excelente custo-benefício.
+                Combinamos a expertise profunda de quem conhece o campo com a I.A. para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ const InteligenciaMercado = () => {
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de Inteligência Artificial, garantindo precisão, agilidade e compreensão profunda do setor.
+                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de IA, garantindo precisão, agilidade e compreensão profunda do setor.
               </p>
             </div>
           </div>
@@ -94,43 +94,41 @@ const InteligenciaMercado = () => {
           </div>
           
           <div className="container-wide relative z-10">
-            <div className="text-center max-w-4xl mx-auto mb-12">
+            <div className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                Fases de um Projeto com a Metodologia "ARAI":
+                Fases de um Projeto de Pesquisa e Inteligência de Mercado
               </h2>
               <p className="text-muted-foreground text-lg">
-                (ARAI - Agile Research with A.I.)
+                (com a Metodologia ARAI)
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {araiSteps.map((phase, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-card rounded-xl p-4 shadow-subtle h-full border border-border">
-                    {/* Leaf with number and title side by side */}
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="relative w-16 h-16 shrink-0">
-                        <img src={leafLogo} alt="" className="w-16 h-16 object-contain" />
-                        <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                          {phase.step}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-heading font-bold text-foreground">
-                        {phase.title}
-                      </h3>
+                  <div className="bg-card rounded-2xl p-6 shadow-subtle h-full border border-border">
+                    {/* Leaf with number */}
+                    <div className="relative w-28 h-28 mb-4">
+                      <img src={leafLogo} alt="" className="w-28 h-28 object-contain" />
+                      <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                        {phase.step}
+                      </span>
                     </div>
-                    <ul className="space-y-1.5 pl-1">
+                    <h3 className="text-lg font-heading font-semibold mb-4">
+                      {phase.title}
+                    </h3>
+                    <ul className="space-y-2">
                       {phase.items.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2 text-base text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-green-medium shrink-0" />
-                          <span className="whitespace-nowrap">{item}</span>
+                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   {index < araiSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10">
-                      <ArrowRight className="w-5 h-5 text-primary" />
+                    <div className="hidden lg:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10">
+                      <ArrowRight className="w-6 h-6 text-primary" />
                     </div>
                   )}
                 </div>
@@ -142,8 +140,8 @@ const InteligenciaMercado = () => {
         {/* Benefits */}
         <section className="section-padding bg-gradient-hero text-primary-foreground">
           <div className="container-wide">
-            <div className="flex items-center justify-center mb-16">
-              <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4 brightness-0 invert" />
+            <div className="flex items-center justify-center gap-3 mb-16">
+              <img src={leafLogo} alt="" className="w-10 h-auto -mr-2 brightness-0 invert" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">
                 Benefícios e Diferenciais
               </h2>
