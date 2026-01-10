@@ -81,7 +81,7 @@ const InteligenciaMercado = () => {
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de Inteligência Artificial, garantindo precisão, agilidade e compreensão profunda do&nbsp;setor.
+                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de Inteligência Artificial, garantindo precisão, agilidade e compreensão profunda do setor.
               </p>
             </div>
           </div>
