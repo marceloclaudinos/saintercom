@@ -13,11 +13,11 @@ const Footer = () => {
       <div className="container-wide py-8 md:py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
-          <div className="lg:col-span-1 flex flex-col items-center">
+          <div className="lg:col-span-1 flex flex-col items-center lg:items-start">
             <img
               src={logo}
               alt="S.A. Intercom"
-              className="h-32 w-auto mb-4 ml-4"
+              className="h-32 w-auto mb-4"
             />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center lg:text-left">
               O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis.
