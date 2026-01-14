@@ -17,10 +17,10 @@ const InteligenciaMercado = () => {
   ];
 
   const araiSteps = [
-    { step: '1', title: 'Planejamento', items: ['Briefing Aprofundado (NLP Analysis)', 'Design do Instrumento (Narrative AI)'] },
-    { step: '2', title: 'Coleta de Dados', items: ['Coleta Primária (AI-powered)', 'Coleta Secundária (Scraping)'] },
-    { step: '3', title: 'Tratamento & Modelagem', items: ['Tratamento (ETL & Data Lake)', 'Modelagem (Feature Engineering)'] },
-    { step: '4', title: 'Entrega Final', items: ['Análise & Insights (AI-Driven)', 'Entrega de Resultados (AI-Results)'] },
+    { step: '1', title: 'Planejamento', items: ['Briefing (NLP Analysis)', 'Design (Narrative AI)'] },
+    { step: '2', title: 'Coleta', items: ['Primária (AI-powered)', 'Secundária (Scraping)'] },
+    { step: '3', title: 'Tratamento', items: ['ETL & Data Lake', 'Feature Engineering'] },
+    { step: '4', title: 'Entrega', items: ['Análise (AI-Driven)', 'Resultados (AI-Results)'] },
   ];
 
   return (
@@ -104,32 +104,38 @@ const InteligenciaMercado = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {araiSteps.map((phase, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-card rounded-2xl p-6 shadow-subtle h-full border border-border">
-                    {/* Leaf with number */}
-                    <div className="relative w-28 h-28 mb-4">
-                      <img src={leafLogo} alt="" className="w-28 h-28 object-contain" />
-                      <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                        {phase.step}
-                      </span>
+                  <div className="bg-card rounded-2xl p-4 shadow-subtle h-full border border-border">
+                    {/* Horizontal layout: Leaf left, content right */}
+                    <div className="flex items-start gap-3">
+                      {/* Leaf with number - smaller and left-aligned */}
+                      <div className="relative w-16 h-16 shrink-0">
+                        <img src={leafLogo} alt="" className="w-16 h-16 object-contain" />
+                        <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                          {phase.step}
+                        </span>
+                      </div>
+                      {/* Title and items */}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl font-heading font-bold mb-2 whitespace-nowrap">
+                          {phase.title}
+                        </h3>
+                        <ul className="space-y-1">
+                          {phase.items.map((item, i) => (
+                            <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
+                              <CheckCircle className="w-3.5 h-3.5 text-green-medium shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-heading font-semibold mb-4">
-                      {phase.title}
-                    </h3>
-                    <ul className="space-y-2">
-                      {phase.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                   {index < araiSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10">
-                      <ArrowRight className="w-6 h-6 text-primary" />
+                    <div className="hidden lg:flex absolute top-1/2 -right-2 -translate-y-1/2 z-10">
+                      <ArrowRight className="w-5 h-5 text-primary" />
                     </div>
                   )}
                 </div>
