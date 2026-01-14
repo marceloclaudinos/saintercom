@@ -17,10 +17,10 @@ const InteligenciaMercado = () => {
   ];
 
   const araiSteps = [
-    { step: '1', title: 'Planejamento', items: ['Briefing Aprofundado (NLP Analysis)', 'Design do Instrumento (Narrative AI)'] },
-    { step: '2', title: 'Coleta de Dados', items: ['Coleta Primária (AI-powered)', 'Coleta Secundária (Scraping)'] },
-    { step: '3', title: 'Tratamento & Modelagem', items: ['Tratamento (ETL & Data Lake)', 'Modelagem (Feature Engineering)'] },
-    { step: '4', title: 'Entrega Final', items: ['Análise & Insights (AI-Driven)', 'Entrega de Resultados (AI-Results)'] },
+    { step: '1', title: 'Planejamento Estratégico' },
+    { step: '2', title: 'Coleta de Dados' },
+    { step: '3', title: 'Tratamento & Modelagem' },
+    { step: '4', title: 'Entrega de Resultados' },
   ];
 
   return (
@@ -104,34 +104,20 @@ const InteligenciaMercado = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {araiSteps.map((phase, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-card rounded-2xl p-6 shadow-subtle h-full border border-border">
-                    {/* Leaf with number */}
-                    <div className="relative w-28 h-28 mb-4">
-                      <img src={leafLogo} alt="" className="w-28 h-28 object-contain" />
-                      <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                        {phase.step}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-heading font-semibold mb-4">
-                      {phase.title}
-                    </h3>
-                    <ul className="space-y-2">
-                      {phase.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div key={index} className="flex items-center gap-4">
+                  {/* Leaf with number - positioned left */}
+                  <div className="relative w-20 h-20 shrink-0">
+                    <img src={leafLogo} alt="" className="w-20 h-20 object-contain" />
+                    <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                      {phase.step}
+                    </span>
                   </div>
-                  {index < araiSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-3 -translate-y-1/2 z-10">
-                      <ArrowRight className="w-6 h-6 text-primary" />
-                    </div>
-                  )}
+                  {/* Title beside the leaf */}
+                  <h3 className="text-xl md:text-2xl font-heading font-semibold text-foreground whitespace-nowrap">
+                    {phase.title}
+                  </h3>
                 </div>
               ))}
             </div>
