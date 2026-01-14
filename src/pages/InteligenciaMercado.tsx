@@ -182,13 +182,14 @@ const InteligenciaMercado = () => {
 
             {/* First row - 2 columns */}
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {/* Gestão de Relacionamento com Clientes */}
+              {/* Visão do Cliente & Relacionamento */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
-                <h3 className="text-xl font-heading font-semibold mb-6">
-                  Gestão de Relacionamento com Clientes
+                <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
+                  Visão do Cliente & Relacionamento
                 </h3>
+                <h4 className="text-base font-medium mb-4 text-foreground">Gestão de Relacionamento com Clientes</h4>
                 <ul className="space-y-3">
-                  {['Funil de Vendas', 'Voz do cliente – Produtor (VOCs – B2C)', 'QFD Agroindústria (VOCs – B2B)', 'Programas de Fidelização (Benchmarking)', 'Mapeamento do Potencial de Consultores (VPC)'].map((item, i) => (
+                  {['Funil de vendas', 'Voz do cliente – Produtor (VOCs – B2C)', 'QFD Agroindústria (VOCs – B2B)', 'Programas de Fidelização (Benchmarking)', 'Mapeamento do Potencial de Consultores (VPC)'].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -197,13 +198,14 @@ const InteligenciaMercado = () => {
                 </ul>
               </div>
 
-              {/* Posicionamento e Branding */}
+              {/* Brand Strategy & Posicionamento */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
-                <h3 className="text-xl font-heading font-semibold mb-6">
-                  Posicionamento e Branding
+                <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
+                  Brand Strategy & Posicionamento
                 </h3>
+                <h4 className="text-base font-medium mb-4 text-foreground">Posicionamento e Branding</h4>
                 <ul className="space-y-3">
-                  {['Teste de Conceito', 'Precificação (PSM, BPTO, Conjoint)', 'Avaliação da percepção e imagem da marca (brand equity)', 'Reposicionamento de produtos e soluções agro (Value Map)', 'ROI de Feiras (Retorno sobre o Investimento em Feiras)'].map((item, i) => (
+                  {['Teste de Conceito', 'Precificação (PSM, BPTO, Conjoint)', 'Avaliação da percepção e imagem da marca (Brand Equity)', 'Reposicionamento de produtos e soluções agro (Value Map)', 'ROI de Feiras (Retorno sobre o Investimento em Feiras)'].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -215,13 +217,14 @@ const InteligenciaMercado = () => {
 
             {/* Second row - 2 columns */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Estudos de Mercado / GTM */}
+              {/* Estratégia de Mercado & Go-to-Market */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
-                <h3 className="text-xl font-heading font-semibold mb-6">
-                  Estudos de Mercado / GTM - Go to Market
+                <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
+                  Estratégia de Mercado & Go-to-Market
                 </h3>
+                <h4 className="text-base font-medium mb-4 text-foreground">Estudos de Mercado / GTM - Go to Market</h4>
                 <ul className="space-y-3">
-                  {['Dimensionamento e Identificação de nichos de mercados potenciais', 'Estratégias de entrada em novas regiões', 'Avaliação de Canais e estrutura de Distribuição', 'Monitoramento Regional de demanda por insumos', 'Análise da concorrência regional em insumos e maquinário', 'Mapeamento de potencial de vendas – VPM Predict Geo'].map((item, i) => (
+                  {['Dimensionamento e Identificação de nichos de mercados potenciais', 'Estratégias de entrada em novas regiões', 'Avaliação de Canais e estrutura de Distribuição', 'Monitoramento regional de demanda por insumos', 'Análise da concorrência regional em insumos e maquinário', 'Mapeamento de potencial de vendas – VPM Predict Geo'].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -230,13 +233,14 @@ const InteligenciaMercado = () => {
                 </ul>
               </div>
 
-              {/* Consultoria Estratégica */}
+              {/* Inteligência Estratégica & Foresight */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
-                <h3 className="text-xl font-heading font-semibold mb-6">
-                  Consultoria Estratégica
+                <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
+                  Inteligência Estratégica & Foresight
                 </h3>
+                <h4 className="text-base font-medium mb-4 text-foreground">Consultoria Estratégica</h4>
                 <ul className="space-y-3">
-                  {['Diagnóstico competitivo de setores', 'Construção de Cenários', 'Validação de conceitos e inovações agro', 'Estudos de viabilidade para novos negócios agrícolas', 'Inteligência Preditiva de Vendas', 'Estruturação de inteligência de mercado interna'].map((item, i) => (
+                  {['Diagnóstico estratégico do ambiente competitivo do agro', 'Cenários de foresight: antecipação de riscos e oportunidades', 'Inteligência antecipativa baseada em modelos ontológicos', 'Avaliação estratégica de novos negócios no agro', 'Inteligência comercial orientada por mapas de significado do cliente', 'Implantação de estruturas internas de inteligência de mercado'].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
