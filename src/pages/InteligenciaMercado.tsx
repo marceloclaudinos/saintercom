@@ -111,9 +111,9 @@ const InteligenciaMercado = () => {
                     {/* Horizontal layout: Leaf left, content right */}
                     <div className="flex items-start gap-3">
                       {/* Leaf with number - smaller and left-aligned */}
-                      <div className="relative w-16 h-16 shrink-0">
-                        <img src={leafLogo} alt="" className="w-16 h-16 object-contain" />
-                        <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+                      <div className="relative w-20 h-20 shrink-0">
+                        <img src={leafLogo} alt="" className="w-20 h-20 object-contain" />
+                        <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
                           {phase.step}
                         </span>
                       </div>
