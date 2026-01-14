@@ -13,7 +13,7 @@ const Parcerias = () => {
   const partners = [
     { 
       icon: MessageSquare, 
-      title: 'IA Centrus', 
+      title: 'Centrus IA', 
       subtitle: 'Agentes Conversacionais com IA',
       logo: logoCentrus,
       description: 'Desenvolvimento de agentes conversacionais avançados, integrados a:',
@@ -29,7 +29,7 @@ const Parcerias = () => {
     },
     { 
       icon: DollarSign, 
-      title: 'IASelfinancial', 
+      title: 'Selfinancial', 
       subtitle: 'Inteligência Financeira & Open Finance',
       logo: logoSelfinancial,
       description: 'Plataforma de inteligência financeira baseada em Open Finance e Inteligência Artificial, voltada à educação financeira, análise de comportamento e automação de decisões, integrada a:',

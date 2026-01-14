@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { CheckCircle, Sprout, TrendingUp, Network } from 'lucide-react';
+import { CheckCircle, Sprout, TrendingUp, Handshake } from 'lucide-react';
 import heroImage from '@/assets/biomateriais-agro-new.png';
 import leafLogo from '@/assets/logo-folha-only-new.png';
 
@@ -29,7 +29,7 @@ const Biomateriais = () => {
       description: t.biomaterials.pillar2Desc,
     },
     {
-      icon: Network,
+      icon: Handshake,
       title: t.biomaterials.pillar3Title,
       description: t.biomaterials.pillar3Desc,
     },
