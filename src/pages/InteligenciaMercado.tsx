@@ -107,10 +107,10 @@ const InteligenciaMercado = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {araiSteps.map((phase, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-card rounded-2xl p-4 shadow-subtle h-full border border-border">
+                  <div className="bg-card rounded-2xl p-4 shadow-subtle h-full border border-border min-h-[120px]">
                     {/* Horizontal layout: Leaf left, content right */}
-                    <div className="flex items-start gap-3">
-                      {/* Leaf with number - smaller and left-aligned */}
+                    <div className="flex items-center gap-4 h-full">
+                      {/* Leaf with number - left-aligned */}
                       <div className="relative w-20 h-20 shrink-0">
                         <img src={leafLogo} alt="" className="w-20 h-20 object-contain" />
                         <span className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
@@ -118,7 +118,7 @@ const InteligenciaMercado = () => {
                         </span>
                       </div>
                       {/* Title and items */}
-                      <div className="flex-1 min-w-0">
+                      <div className="flex-1 min-w-0 flex flex-col justify-center">
                         <h3 className="text-xl font-heading font-bold mb-2 whitespace-nowrap">
                           {phase.title}
                         </h3>
