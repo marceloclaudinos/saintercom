@@ -256,7 +256,7 @@ const InteligenciaMercado = () => {
                 Pesquisa de Mercado
               </h3>
               <p className="text-muted-foreground text-lg">
-                Também realizamos pesquisas de mercado (qualitativas e quantitativas), com foco em lançamentos, performance de produto, satisfação do produto e canais de distribuição. Exemplos:
+                Realizamos pesquisas de mercado qualitativas e quantitativas, com foco em lançamentos, performance de produtos, satisfação do cliente e análise de canais de distribuição. Exemplos:
               </p>
             </div>
 
