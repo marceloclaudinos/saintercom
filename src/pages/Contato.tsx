@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, Phone } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 import saIntercomLogo from '@/assets/logo-transparent-SA-Intercom.png';
@@ -54,6 +54,7 @@ const Contato = () => {
   const contactInfo = [
     { icon: MapPin, label: 'São Paulo, SP - Brasil' },
     { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br' },
+    { icon: Phone, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=+5511996059833' },
   ];
 
   return (

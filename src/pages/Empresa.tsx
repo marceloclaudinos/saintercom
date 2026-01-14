@@ -39,10 +39,10 @@ const Empresa = () => {
   ];
 
   const valueBlocks = [
-    { title: 'S.A. Intelligence — Excelência Analítica', desc: 'Atuamos com profundidade analítica, visão estratégica e qualidade da informação.' },
-    { title: 'S.A. Sustainability — Sustentabilidade com Viabilidade', desc: 'Conectamos bioeconomia, biomassa e soluções sustentáveis escaláveis no agronegócio.' },
-    { title: 'S.A. Business Partner — Conexões que Geram Transformação', desc: 'Atuamos como elo estratégico entre empresas inovadoras, adoção de novas tecnologias, IA e práticas modernas de sustentabilidade.' },
-    { title: 'Valor Transversal — Ética, Governança e Confiança', desc: 'Operamos com ética, transparência, governança de dados de clientes, parceiros e ao mercado.' },
+    { title: 'S.A. Intelligence — Excelência Analítica', desc: 'Atuamos com profundidade analítica, visão estratégica e compromisso absoluto com a qualidade da informação.' },
+    { title: 'S.A. Sustainability — Sustentabilidade com Viabilidade Econômica', desc: 'Conectamos bioeconomia, biomassa e soluções sustentáveis a modelos de negócio reais e escaláveis no agronegócio.' },
+    { title: 'S.A. Business Partner — Conexões que Geram Transformação', desc: 'Atuamos como elo estratégico entre empresas inovadoras e o agronegócio, viabilizando a adoção de novas tecnologias, IA e práticas modernas de gestão.' },
+    { title: 'Valor Transversal — Ética, Governança e Confiança', desc: 'Operamos com ética, transparência e governança de dados perante clientes, parceiros e mercado.' },
   ];
 
   return (
