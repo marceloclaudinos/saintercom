@@ -88,7 +88,7 @@ const Biomateriais = () => {
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A S.A. Sustainability, unidade de negócios da S.A. Intercom, combina mais de 30 anos de experiência no agronegócio, inteligência de mercado e parcerias estratégicas para impulsionar soluções inovadoras e sustentáveis no agro.
+                A S.A. Sustainability, unidade de negócios da S.A. Intercom, combina mais de 30 anos de experiência no agronegócio, inteligência de mercado e parcerias estratégicas para desenvolver e impulsionar soluções sustentáveis e inovadoras baseadas em biomateriais aplicados ao agro.
               </p>
             </div>
           </div>
@@ -144,8 +144,13 @@ const Biomateriais = () => {
         </section>
 
         {/* CTA */}
-        <section className="section-padding bg-secondary/30">
-          <div className="container-wide text-center">
+        <section className="section-padding bg-secondary/30 relative overflow-hidden">
+          {/* Large leaf background on left side */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-20 pointer-events-none">
+            <img src={leafLogo} alt="" className="w-80 md:w-96 h-auto" />
+          </div>
+          
+          <div className="container-wide text-center relative z-10">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">
                 S.A. Intercom – Transformando inovação em valor real para o agronegócio

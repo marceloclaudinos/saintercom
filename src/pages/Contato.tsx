@@ -2,10 +2,11 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Mail, MapPin, Send, CheckCircle, Phone } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 import saIntercomLogo from '@/assets/logo-transparent-SA-Intercom.png';
+import whatsappIcon from '@/assets/whatsapp-icon.jpg';
 
 const Contato = () => {
   const { t } = useLanguage();
@@ -52,9 +53,9 @@ const Contato = () => {
   };
 
   const contactInfo = [
-    { icon: MapPin, label: 'São Paulo, SP - Brasil' },
-    { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br' },
-    { icon: Phone, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=+5511996059833' },
+    { icon: MapPin, label: 'São Paulo, SP - Brasil', isImage: false },
+    { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br', isImage: false },
+    { icon: whatsappIcon, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=+5511996059833', isImage: true },
   ];
 
   return (
@@ -178,8 +179,12 @@ const Contato = () => {
                   <div className="space-y-4">
                     {contactInfo.map((item, index) => (
                       <div key={index} className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center shrink-0">
-                          <item.icon className="w-5 h-5 text-primary-foreground" />
+                        <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center shrink-0 overflow-hidden">
+                          {item.isImage ? (
+                            <img src={item.icon as string} alt="" className="w-6 h-6 object-contain" />
+                          ) : (
+                            <item.icon className="w-5 h-5 text-primary-foreground" />
+                          )}
                         </div>
                         <div>
                           {item.href ? (

@@ -4,7 +4,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Handshake, MessageSquare, DollarSign } from 'lucide-react';
 import leafLogo from '@/assets/logo-transparent-sem-texto.png';
 import heroImage from '@/assets/parcerias-agro.png';
-import logoCentrus from '@/assets/logo-centrus-ai.png';
+import logoCentrus from '@/assets/parceiros/logo-centrus.jpg';
 import logoSelfinancial from '@/assets/selfinancial-logo.jpg';
 
 const Parcerias = () => {
@@ -56,11 +56,6 @@ const Parcerias = () => {
             style={{ backgroundImage: `url(${heroImage})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
-          </div>
-          
-          {/* Leaf Logo - Top right, smaller */}
-          <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-32 h-auto" />
           </div>
           
           <div className="container-wide relative z-10 pt-24">
