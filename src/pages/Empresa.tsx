@@ -1,9 +1,11 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Target, Eye, Heart, CheckCircle, Store, Zap, Tractor, Sprout, Beef, Calendar, Users, Building2, Focus, Award } from 'lucide-react';
+import { Target, Eye, Heart, CheckCircle, Store, Tractor, Sprout, Calendar, Users, Building2, Focus, Award } from 'lucide-react';
 import heroImage from '@/assets/empresa-hero.jpeg';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
+import energiaIcon from '@/assets/energia-icon.png';
+import boiIcon from '@/assets/boi-icon.png';
 
 const Empresa = () => {
   const { t } = useLanguage();
@@ -24,11 +26,11 @@ const Empresa = () => {
   ];
 
   const segments = [
-    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
-    { icon: Zap, title: 'Energia, Bioeconomia & Recursos Naturais', items: ['Biocombustíveis', 'Energias Renováveis', 'Biomassa'] },
-    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão', 'Equipamentos para Operações Agrícolas'] },
     { icon: Sprout, title: 'Agricultura & Insumos', items: ['Proteção de Cultivos', 'Fertilizantes & Nutrição Vegetal', 'Sementes & Biotecnologia Agrícola'] },
-    { icon: Beef, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição Animal', 'Pecuária de Corte e Leite', 'Aves, Suínos e Pets'] },
+    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão', 'Equipamentos para Operações Agrícolas'] },
+    { iconImage: boiIcon, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição Animal', 'Pecuária de Corte e Leite', 'Aves, Suínos e Pets'] },
+    { iconImage: energiaIcon, title: 'Energia, Bioeconomia & Recursos Naturais', items: ['Biocombustíveis', 'Energias Renováveis', 'Biomassa'] },
+    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
   ];
 
   const whyUs = [
@@ -142,7 +144,11 @@ const Empresa = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {segments.map((segment, index) => (
                 <div key={index} className="bg-card rounded-2xl p-6 shadow-subtle text-center">
-                  <segment.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  {segment.iconImage ? (
+                    <img src={segment.iconImage} alt={segment.title} className="w-12 h-12 mx-auto mb-4 object-contain" />
+                  ) : (
+                    <segment.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  )}
                   <h3 className="text-base font-heading font-semibold mb-4">
                     {segment.title}
                   </h3>
