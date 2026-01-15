@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import logo from '@/assets/logo-folha-transparent.png';
 import dunsLogo from '@/assets/duns-certificate.jpeg';
+import whatsappIcon from '@/assets/whatsapp-icon.jpg';
 import { Linkedin, Mail, MapPin, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
@@ -90,6 +91,12 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-green-light" />
                 <a href="mailto:contato@saintercom.com.br" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
                   contato@saintercom.com.br
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
+                <a href="https://api.whatsapp.com/send?phone=+5511996059833" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                  +55 11 99605-9833
                 </a>
               </div>
             </div>

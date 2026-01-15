@@ -28,7 +28,7 @@ const Empresa = () => {
     { icon: Zap, title: 'Energia, Bioeconomia & Recursos Naturais', items: ['Biocombustíveis', 'Energias Renováveis', 'Biomassa'] },
     { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão', 'Equipamentos para Operações Agrícolas'] },
     { icon: Sprout, title: 'Agricultura & Insumos', items: ['Proteção de Cultivos', 'Fertilizantes & Nutrição Vegetal', 'Sementes & Biotecnologia Agrícola'] },
-    { icon: Beef, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição', 'Pecuária de Corte', 'Aves, Suínos e Pets'] },
+    { icon: Beef, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição Animal', 'Pecuária de Corte e Leite', 'Aves, Suínos e Pets'] },
   ];
 
   const whyUs = [
@@ -59,11 +59,6 @@ const Empresa = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
           </div>
           
-          {/* Leaf Logo Background */}
-          <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-64 h-auto" />
-          </div>
-          
           <div className="container-wide relative z-10">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-8">
@@ -84,10 +79,10 @@ const Empresa = () => {
           </div>
         </section>
 
-        {/* Mission, Vision, Values */}
+        {/* Mission, Vision */}
         <section className="section-padding bg-background">
           <div className="container-wide">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Mission */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle border border-border">
                 <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6">
@@ -112,24 +107,6 @@ const Empresa = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {t.company.vision}
                 </p>
-              </div>
-
-              {/* Values */}
-              <div className="bg-card rounded-2xl p-8 shadow-subtle border border-border">
-                <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6">
-                  <Heart className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-heading font-semibold mb-4 uppercase tracking-wide">
-                  {t.company.valuesTitle}
-                </h3>
-                <ul className="space-y-2">
-                  {values.map((value, index) => (
-                    <li key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-medium" />
-                      {value}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </div>
