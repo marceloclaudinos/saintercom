@@ -55,7 +55,7 @@ const Contato = () => {
   const contactInfo = [
     { icon: MapPin, label: 'São Paulo, SP - Brasil', isImage: false },
     { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br', isImage: false },
-    { icon: whatsappIcon, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=+5511996059833', isImage: true },
+    { icon: whatsappIcon, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=5511996059833', isImage: true },
   ];
 
   return (
@@ -188,7 +188,7 @@ const Contato = () => {
                         </div>
                         <div>
                           {item.href ? (
-                            <a href={item.href} className="text-base hover:text-primary transition-colors">
+                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-base hover:text-primary transition-colors">
                               {item.label}
                             </a>
                           ) : (
