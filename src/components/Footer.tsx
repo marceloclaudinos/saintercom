@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
-                <a href="https://api.whatsapp.com/send?phone=+5511996059833" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                <a href="https://api.whatsapp.com/send?phone=5511996059833" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
                   +55 11 99605-9833
                 </a>
               </div>
