@@ -15,6 +15,9 @@ export const translations = {
     },
     hero: {
       slogan: 'O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis',
+      sloganLine1: 'O Agro conectado ao futuro:',
+      sloganLine2: 'Insights Inteligentes, Decisões Sustentáveis',
+      description: 'Assumimos os desafios dos nossos clientes como nossos, desenvolvendo projetos e soluções sob medida que impulsionam negócios e fortalecem decisões estratégicas.',
       subtitle: 'Juntos com grandes instituições, transformamos o conhecimento em inovação, impulsionando negócios, projetos e objetivos pessoais e coletivos.',
       cta: 'Conheça Nossos Serviços',
       ctaSecondary: 'Fale Conosco',
@@ -37,6 +40,7 @@ export const translations = {
     },
     services: {
       sectionTitle: 'Onde atuamos',
+      learnMore: 'Saiba mais',
       intelligenceDesc: 'Combinamos a expertise profunda de quem conhece o campo com a I.A. para entregar projetos de Pesquisa e Inteligência de Mercado com excelência, agilidade e valor.',
       biomaterialsDesc: 'Desenvolvimento de mercado para soluções sustentáveis e bioeconomia. Conexão entre inovação, ciência e impacto real no campo.',
       partnershipsDesc: 'Conexão com soluções emergentes, plataformas de produtividade e parceiros globais em IA.',
@@ -184,6 +188,9 @@ export const translations = {
     },
     hero: {
       slogan: 'Agro connected to the future: Intelligent Insights, Sustainable Decisions',
+      sloganLine1: 'Agro connected to the future:',
+      sloganLine2: 'Intelligent Insights, Sustainable Decisions',
+      description: 'We take on our clients\' challenges as our own, developing tailored projects and solutions that drive business and strengthen strategic decisions.',
       subtitle: 'Together with great institutions, we transform knowledge into innovation, driving businesses, projects, and personal and collective goals.',
       cta: 'Discover Our Services',
       ctaSecondary: 'Contact Us',
@@ -206,6 +213,7 @@ export const translations = {
     },
     services: {
       sectionTitle: 'Where we work',
+      learnMore: 'Learn more',
       intelligenceDesc: 'We combine the deep expertise of those who know the field with A.I. to deliver Market Research and Intelligence projects with excellence, agility, and value.',
       biomaterialsDesc: 'Market development for sustainable solutions and bioeconomy. Connection between innovation, science, and real impact in the field.',
       partnershipsDesc: 'Connection with emerging solutions, productivity platforms, and global AI partners.',
@@ -353,6 +361,9 @@ export const translations = {
     },
     hero: {
       slogan: 'El Agro conectado al futuro: Insights Inteligentes, Decisiones Sustentables',
+      sloganLine1: 'El Agro conectado al futuro:',
+      sloganLine2: 'Insights Inteligentes, Decisiones Sustentables',
+      description: 'Asumimos los desafíos de nuestros clientes como propios, desarrollando proyectos y soluciones a medida que impulsan negocios y fortalecen decisiones estratégicas.',
       subtitle: 'Junto con grandes instituciones, transformamos el conocimiento en innovación, impulsando negocios, proyectos y objetivos personales y colectivos.',
       cta: 'Conoce Nuestros Servicios',
       ctaSecondary: 'Contáctanos',
@@ -375,6 +386,7 @@ export const translations = {
     },
     services: {
       sectionTitle: 'Donde actuamos',
+      learnMore: 'Saber más',
       intelligenceDesc: 'Combinamos la experiencia profunda de quienes conocen el campo con la I.A. para entregar proyectos de Investigación e Inteligencia de Mercado con excelencia, agilidad y valor.',
       biomaterialsDesc: 'Desarrollo de mercado para soluciones sostenibles y bioeconomía. Conexión entre innovación, ciencia e impacto real en el campo.',
       partnershipsDesc: 'Conexión con soluciones emergentes, plataformas de productividad y socios globales en IA.',

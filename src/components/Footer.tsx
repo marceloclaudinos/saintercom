@@ -21,7 +21,7 @@ const Footer = () => {
               className="h-32 w-auto mb-4 lg:ml-6"
             />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 text-center lg:text-left">
-              O Agro conectado ao futuro: Insights Inteligentes, Decisões Sustentáveis.
+              {t.hero.slogan}
             </p>
             <div className="flex gap-3">
               <a

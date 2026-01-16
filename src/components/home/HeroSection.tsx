@@ -28,16 +28,16 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-4 animate-slide-up">
-            <span className="text-gradient">O Agro conectado ao futuro:</span>
+            <span className="text-gradient">{t.hero.sloganLine1}</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold text-foreground mb-8 animate-slide-up delay-100">
-            Insights Inteligentes, Decisões Sustentáveis
+            {t.hero.sloganLine2}
           </h2>
 
           {/* Subtitle - same dark palette as h2 */}
           <p className="text-base md:text-lg text-foreground max-w-2xl animate-slide-up delay-200 font-semibold">
-            Assumimos os desafios dos nossos clientes como nossos, desenvolvendo projetos e soluções sob medida que impulsionam negócios e fortalecem decisões estratégicas.
+            {t.hero.description}
           </p>
         </div>
       </div>

@@ -77,7 +77,7 @@ const ServicesSection = () => {
                     {service.description}
                   </p>
                   <div className="flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
-                    <span>Saiba mais</span>
+                    <span>{t.services?.learnMore || 'Saiba mais'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
