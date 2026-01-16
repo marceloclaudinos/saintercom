@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Target, Eye, Heart, CheckCircle, Store, Tractor, Sprout, Calendar, Users, Building2, Focus, Award } from 'lucide-react';
+import { Target, Eye, CheckCircle, Store, Tractor, Sprout, Calendar, Users, Building2, Focus, Award } from 'lucide-react';
 import heroImage from '@/assets/empresa-hero.jpeg';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 import energiaIcon from '@/assets/energia-icon.png';
@@ -11,40 +11,33 @@ const Empresa = () => {
   const { t } = useLanguage();
 
   const highlights = [
-    { icon: Calendar, title: '30+ anos de experiência', description: 'Experiência em Inteligência de Mercado Agro.' },
-    { icon: Users, title: 'Equipe sênior', description: 'Agrônomos, Estatísticos, Entrevistadores Campo, Consultores Especialistas, AI Specialist.' },
-    { icon: Building2, title: 'Empresa com expertise em IA', description: 'Escritório em São Paulo + Labs de IA na Califórnia (Berkeley).' },
-    { icon: Focus, title: 'Foco exclusivo', description: 'Agronegócio na América Latina.' },
-    { icon: Award, title: 'Melhor Custo/Benefício', description: 'Estrutura enxuta e Processos eficientes, focados na análise e na Qualidade da informação.' },
-  ];
-
-  const values = [
-    t.company.value1,
-    t.company.value2,
-    t.company.value3,
-    t.company.value4,
+    { icon: Calendar, title: t.company.experience, description: t.company.experienceDesc },
+    { icon: Users, title: t.company.team, description: t.company.teamDesc },
+    { icon: Building2, title: t.company.expertise, description: t.company.expertiseDesc },
+    { icon: Focus, title: t.company.focus, description: t.company.focusDesc },
+    { icon: Award, title: t.company.cost, description: t.company.costDesc },
   ];
 
   const segments = [
-    { icon: Sprout, title: 'Agricultura & Insumos', items: ['Proteção de Cultivos', 'Fertilizantes & Nutrição Vegetal', 'Sementes & Biotecnologia Agrícola'] },
-    { icon: Tractor, title: 'Máquinas Agrícolas', items: ['Máquinas e Implementos Agrícolas', 'Agricultura de Precisão', 'Equipamentos para Operações Agrícolas'] },
-    { iconImage: boiIcon, title: 'Animal Health & Nutrition', items: ['Saúde e Nutrição Animal', 'Pecuária de Corte e Leite', 'Aves, Suínos e Pets'] },
-    { iconImage: energiaIcon, title: 'Energia, Bioeconomia & Recursos Naturais', items: ['Biocombustíveis', 'Energias Renováveis', 'Biomassa'] },
-    { icon: Store, title: 'Canais, Mercado & Ecossistema Agro', items: ['Cooperativas e Revendas Agropecuárias', 'Traders e Operadores', 'Prestadores de Serviços Agrícolas'] },
-  ];
-
-  const whyUs = [
-    'Mais de 30 anos de atuação no agronegócio, combinando pesquisa de campo, análise estratégica e leitura real do mercado para decisões mais assertivas.',
-    'Atuamos como elo entre o agronegócio e empresas de tecnologia, IA, transformação digital e novos modelos de gestão, acelerando a adoção de inovação no setor.',
-    'Sustentabilidade conectada a negócios viáveis — Estruturamos e posicionamos soluções sustentáveis e de bioeconomia com foco em mercado, escala industrial, parcerias e retorno econômico.',
-    'Visão integrada do ecossistema agroindustrial — Do produtor à indústria, da inovação ao mercado, entregamos soluções completas que conectam dados, tecnologia, sustentabilidade e estratégia.',
+    { icon: Sprout, title: t.company.segment1Title, items: t.company.segment1Items },
+    { icon: Tractor, title: t.company.segment2Title, items: t.company.segment2Items },
+    { iconImage: boiIcon, title: t.company.segment3Title, items: t.company.segment3Items },
+    { iconImage: energiaIcon, title: t.company.segment4Title, items: t.company.segment4Items },
+    { icon: Store, title: t.company.segment5Title, items: t.company.segment5Items },
   ];
 
   const valueBlocks = [
-    { title: 'S.A. Intelligence — Excelência Analítica', desc: 'Atuamos com profundidade analítica, visão estratégica e compromisso absoluto com a qualidade da informação.' },
-    { title: 'S.A. Sustainability — Sustentabilidade com Viabilidade Econômica', desc: 'Conectamos bioeconomia, biomassa e soluções sustentáveis a modelos de negócio reais e escaláveis no agronegócio.' },
-    { title: 'S.A. Business Partner — Conexões que Geram Transformação', desc: 'Atuamos como elo estratégico entre empresas inovadoras e o agronegócio, viabilizando a adoção de novas tecnologias, IA e práticas modernas de gestão.' },
-    { title: 'Valor Transversal — Ética, Governança e Confiança', desc: 'Operamos com ética, transparência e governança de dados perante clientes, parceiros e mercado.' },
+    { title: t.company.valueBlock1Title, desc: t.company.valueBlock1Desc },
+    { title: t.company.valueBlock2Title, desc: t.company.valueBlock2Desc },
+    { title: t.company.valueBlock3Title, desc: t.company.valueBlock3Desc },
+    { title: t.company.valueBlock4Title, desc: t.company.valueBlock4Desc },
+  ];
+
+  const whyUs = [
+    t.company.why1,
+    t.company.why2,
+    t.company.why3,
+    t.company.why4,
   ];
 
   return (
@@ -118,7 +111,7 @@ const Empresa = () => {
         <section className="section-padding bg-secondary/30">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-12">
-              Valores
+              {t.company.valuesTitle}
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {valueBlocks.map((block, index) => (
@@ -139,7 +132,7 @@ const Empresa = () => {
         <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              Segmentos de Atuação no Agronegócio
+              {t.company.segmentsTitle}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {segments.map((segment, index) => (

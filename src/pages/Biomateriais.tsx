@@ -9,12 +9,12 @@ const Biomateriais = () => {
   const { t } = useLanguage();
 
   const services = [
-    'Identificar e priorizar bioprodutos com alto potencial de mercado',
-    'Mapear cadeias produtivas, rotas comerciais e compradores estratégicos',
-    'Estruturar modelos de parceria e apoiar a captação de recursos e investimentos',
-    'Analisar competitividade, riscos e barreiras técnicas, regulatórias e comerciais',
-    'Atuar na concepção, estruturação e construção de unidades industriais',
-    'Definir estratégias de posicionamento às necessidades concretas do agronegócio',
+    t.biomaterials.service1,
+    t.biomaterials.service2,
+    t.biomaterials.service3,
+    t.biomaterials.service4,
+    t.biomaterials.service5,
+    t.biomaterials.service6,
   ];
 
   const pillars = [
@@ -60,7 +60,7 @@ const Biomateriais = () => {
               <div className="flex items-center mb-4">
                 <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
                 <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
-                  S.A. Sustainability
+                  {t.biomaterials.subtitle}
                 </span>
               </div>
               
@@ -71,7 +71,7 @@ const Biomateriais = () => {
                 {t.biomaterials.tagline}
               </p>
               <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
-                Nosso olhar estratégico se volta para novos materiais, tecnologias e soluções sustentáveis capazes de transformar resíduos, melhorar a eficiência produtiva e abrir novas fronteiras de valor no agro.
+                {t.biomaterials.intro}
               </p>
             </div>
           </div>
@@ -83,12 +83,12 @@ const Biomateriais = () => {
             <div className="flex items-center justify-center mb-8">
               <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                S.A. Sustainability
+                {t.biomaterials.subtitle}
               </h2>
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A S.A. Sustainability, unidade de negócios da S.A. Intercom, combina mais de 30 anos de experiência no agronegócio, inteligência de mercado e parcerias estratégicas para desenvolver e impulsionar soluções sustentáveis e inovadoras baseadas em biomateriais aplicados ao agro.
+                {t.biomaterials.sectionDesc}
               </p>
             </div>
           </div>
@@ -98,10 +98,10 @@ const Biomateriais = () => {
         <section className="section-padding bg-gradient-hero text-primary-foreground">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Nossos Três Focos de Atuação
+              {t.biomaterials.pillarsTitle}
             </h2>
             <p className="text-primary-foreground/80 text-center max-w-3xl mx-auto mb-16 text-lg">
-              Apoio estratégico e financeiro à criação de novas tecnologias e soluções de materiais, alinhados à agenda ESG.
+              {t.biomaterials.pillarsSubtitle}
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {pillars.map((pillar, index) => (
@@ -125,10 +125,10 @@ const Biomateriais = () => {
         <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
-              Como Apoiamos Nossos Parceiros
+              {t.biomaterials.servicesTitle}
             </h2>
             <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-16 text-lg">
-              Unimos conhecimento de mercado, recursos e investimentos para transformar inovação em negócios viáveis no agro. Atuamos junto aos nossos parceiros para:
+              {t.biomaterials.servicesSubtitle}
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {services.map((service, index) => (
@@ -153,10 +153,10 @@ const Biomateriais = () => {
           <div className="container-wide text-center relative z-10">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">
-                S.A. Intercom – Transformando inovação em valor real para o agronegócio
+                {t.biomaterials.ctaTitle}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Combinamos 30 anos de experiência no setor agro, relacionamentos e novas tecnologias de materiais de resíduos agrícolas, posicionando soluções inovadoras de forma estratégica.
+                {t.biomaterials.ctaDesc}
               </p>
             </div>
           </div>

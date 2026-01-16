@@ -13,33 +13,22 @@ const Parcerias = () => {
   const partners = [
     { 
       icon: MessageSquare, 
-      title: 'Centrus IA', 
-      subtitle: 'Agentes Conversacionais com IA',
+      title: t.partnerships.centrusTitle, 
+      subtitle: t.partnerships.centrusSubtitle,
       logo: logoCentrus,
-      description: 'Desenvolvimento de agentes conversacionais avançados, integrados a:',
-      items: [
-        'Atendimento ao cliente',
-        'WhatsApp empresarial',
-        'SAC e suporte técnico',
-        'Automação de vendas e processos',
-        'Bots de voz e texto em linguagem natural',
-      ],
-      cta: 'A S.A. Intercom conecta empresas do Agro a soluções conversacionais preparadas para escalar atendimento, reduzir custos e melhorar experiência do cliente.',
+      description: t.partnerships.centrusDesc,
+      items: t.partnerships.centrusItems,
+      cta: t.partnerships.centrusCta,
       link: '#'
     },
     { 
       icon: DollarSign, 
-      title: 'Selfinancial', 
-      subtitle: 'Inteligência Financeira & Open Finance',
+      title: t.partnerships.selfinancialTitle, 
+      subtitle: t.partnerships.selfinancialSubtitle,
       logo: logoSelfinancial,
-      description: 'Plataforma de inteligência financeira baseada em Open Finance e Inteligência Artificial, voltada à educação financeira, análise de comportamento e automação de decisões, integrada a:',
-      items: [
-        'Educação financeira digital e personalizada',
-        'Automação de recomendações financeiras',
-        'Integração segura com dados bancários (Open Finance)',
-        'Agentes conversacionais financeiros com IA',
-      ],
-      cta: 'A S.A. Intercom conecta empresas do Agro à Selfinancial, viabilizando a compreensão do comportamento financeiro de produtores, apoiando estratégias de relacionamento bancário e decisões mais sustentáveis, orientadas por dados.',
+      description: t.partnerships.selfinancialDesc,
+      items: t.partnerships.selfinancialItems,
+      cta: t.partnerships.selfinancialCta,
       link: '#'
     },
   ];
@@ -64,7 +53,7 @@ const Parcerias = () => {
               <div className="flex items-center mb-4">
                 <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
                 <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
-                  S.A. Business Partner
+                  {t.partnerships.subtitle}
                 </span>
               </div>
               
@@ -75,12 +64,12 @@ const Parcerias = () => {
               
               {/* Tagline */}
               <p className="text-xl md:text-2xl text-foreground font-heading font-medium mb-6">
-                Conectando empresas inovadoras às demandas do agronegócio
+                {t.partnerships.tagline}
               </p>
               
               {/* Main description */}
               <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
-                A S.A. Intercom atua como interface estratégica entre empresas parceiras e empresas do agronegócio, apoiando a incorporação de tecnologias emergentes, inteligência artificial, transformação digital e novos modelos de gestão nas organizações do setor.
+                {t.partnerships.intro}
               </p>
             </div>
           </div>
@@ -92,12 +81,12 @@ const Parcerias = () => {
             <div className="flex items-center justify-center mb-8">
               <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                S.A. Business Partner
+                {t.partnerships.subtitle}
               </h2>
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Somos o elo entre empresas parceiras de conhecimento, inovação e impacto, levando para o agronegócio soluções que reduzem custos, aumentam eficiência e elevam a competitividade.
+                {t.partnerships.sectionDesc}
               </p>
             </div>
           </div>
@@ -107,7 +96,7 @@ const Parcerias = () => {
         <section className="section-padding bg-background">
           <div className="container-wide">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-              Nossos Parceiros
+              {t.partnerships.partnersTitle}
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {partners.map((partner, index) => (

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import leafLogo from '@/assets/logo-sa-intercom-transparent.png';
 import saIntercomLogo from '@/assets/logo-transparent-SA-Intercom.png';
@@ -211,16 +211,16 @@ const Contato = () => {
                 {/* D-U-N-S Section */}
                 <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
                   <h3 className="text-lg font-heading font-semibold mb-4">
-                    Registro Internacional D-U-N-S®
+                    {t.contact.dunsTitle}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    A S.A. Intercom possui identificação global D-U-N-S®, utilizada mundialmente por empresas e instituições para processos de compliance, auditoria e qualificação de fornecedores.
+                    {t.contact.dunsDesc}
                   </p>
                   <div className="text-sm text-muted-foreground space-y-1">
-                    <p><strong>S.A. Intercom</strong> – Santos & Santos Consultoria e Assessoria Empresarial Ltda.</p>
+                    <p><strong>{t.contact.dunsCompany}</strong></p>
                     <p>CNPJ: 08.343.129/0001-04</p>
                     <p>D-U-N-S® Number: 898675456</p>
-                    <p className="text-xs mt-2 italic">Registro internacional corporativo mantido pela Dun & Bradstreet.</p>
+                    <p className="text-xs mt-2 italic">{t.contact.dunsNote}</p>
                   </div>
                 </div>
               </div>
