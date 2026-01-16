@@ -10,17 +10,17 @@ const InteligenciaMercado = () => {
   const { t } = useLanguage();
 
   const benefits = [
-    { label: 'Redução de Custo', value: '30%' },
-    { label: 'Entrega Mais Rápida', value: '2x' },
-    { label: 'Escalabilidade', value: '∞' },
-    { label: 'Qualidade', value: '100%' },
+    { label: t.intelligence.benefit1, value: '30%' },
+    { label: t.intelligence.benefit2, value: '2x' },
+    { label: t.intelligence.benefit3, value: '∞' },
+    { label: t.intelligence.benefit4, value: '100%' },
   ];
 
   const araiSteps = [
-    { step: '1', title: 'Planejamento', items: ['Briefing (NLP Analysis)', 'Design (Narrative AI)'] },
-    { step: '2', title: 'Coleta', items: ['Primária (AI-powered)', 'Secundária (Scraping)'] },
-    { step: '3', title: 'Tratamento', items: ['ETL & Data Lake', 'Feature Engineering'] },
-    { step: '4', title: 'Entrega', items: ['Análise (AI-Driven)', 'Resultados (AI-Results)'] },
+    { step: '1', title: t.intelligence.step1, items: ['Briefing (NLP Analysis)', 'Design (Narrative AI)'] },
+    { step: '2', title: t.intelligence.step2, items: ['Primária (AI-powered)', 'Secundária (Scraping)'] },
+    { step: '3', title: t.intelligence.step3, items: ['ETL & Data Lake', 'Feature Engineering'] },
+    { step: '4', title: t.intelligence.step4, items: ['Análise (AI-Driven)', 'Resultados (AI-Results)'] },
   ];
 
   return (
@@ -48,23 +48,23 @@ const InteligenciaMercado = () => {
               <div className="flex items-center mb-4">
                 <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
                 <span className="text-xl md:text-2xl font-heading font-semibold text-primary">
-                  S.A. Agribusiness Intelligence
+                  {t.intelligence.subtitle}
                 </span>
               </div>
               
               {/* Main Title */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="text-gradient">INTELIGÊNCIA DE MERCADO</span>
+                <span className="text-gradient">{t.intelligence.title}</span>
               </h1>
               
               {/* Tagline */}
               <p className="text-xl md:text-2xl text-foreground font-heading font-medium mb-6">
-                Made for humans. Powered by AI.
+                {t.intelligence.tagline}
               </p>
               
               {/* Main description */}
               <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-3xl font-semibold">
-                Unimos experiência real de campo com tecnologia de Inteligência Artificial para desenvolver Projetos de Pesquisa e Inteligência de Mercado, entregando análises completas, rápidas e com excelente custo-benefício.
+                {t.intelligence.intro}
               </p>
             </div>
           </div>
@@ -76,12 +76,12 @@ const InteligenciaMercado = () => {
             <div className="flex items-center justify-center mb-8">
               <img src={leafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                S.A. Agribusiness Intelligence
+                {t.intelligence.subtitle}
               </h2>
             </div>
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Esta unidade de negócio da S.A. Intercom, trabalha para transformar informações do mercado em insights práticos, ajudando empresas a entenderem melhor seus clientes, competidores, riscos e oportunidades no agro. Cada projeto de pesquisa e inteligência de mercado combina a visão humana de consultores experientes com ferramentas modernas de Inteligência Artificial, garantindo precisão, agilidade e compreensão profunda do setor.
+                {t.intelligence.sectionDesc}
               </p>
             </div>
           </div>
@@ -97,10 +97,10 @@ const InteligenciaMercado = () => {
           <div className="container-wide relative z-10">
             <div className="text-center max-w-4xl mx-auto mb-16">
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                Fases de um Projeto com a Metodologia "ARAI":
+                {t.intelligence.araiTitle}
               </h2>
               <p className="text-muted-foreground text-lg">
-                (ARAI - Agile Research with A.I.)
+                {t.intelligence.araiSubtitle}
               </p>
             </div>
 
@@ -150,7 +150,7 @@ const InteligenciaMercado = () => {
             <div className="flex items-center justify-center mb-16">
               <img src={colorLeafLogo} alt="" className="w-28 h-32 md:w-32 md:h-36 object-contain -mr-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">
-                Benefícios e Diferenciais
+                {t.intelligence.benefitsTitle}
               </h2>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -173,10 +173,10 @@ const InteligenciaMercado = () => {
           <div className="container-wide">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                Exemplos de Projetos que Desenvolvemos
+                {t.intelligence.projectsTitle}
               </h2>
               <p className="text-muted-foreground text-lg">
-                Unimos Inteligência de Mercado, I.A. e Consultoria Sênior para apoiar decisões estratégicas no Agronegócio.
+                {t.intelligence.projectsSubtitle}
               </p>
             </div>
 
@@ -185,11 +185,11 @@ const InteligenciaMercado = () => {
               {/* Visão do Cliente & Relacionamento */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
-                  Visão do Cliente & Relacionamento
+                  {t.intelligence.project1Title}
                 </h3>
-                <h4 className="text-base font-medium mb-4 text-foreground">Gestão de Relacionamento com Clientes</h4>
+                <h4 className="text-base font-medium mb-4 text-foreground">{t.intelligence.project1Subtitle}</h4>
                 <ul className="space-y-3">
-                  {['Funil de vendas', 'Voz do cliente – Produtor (VOCs – B2C)', 'QFD Agroindústria (VOCs – B2B)', 'Programas de Fidelização (Benchmarking)', 'Mapeamento do Potencial de Consultores (VPC)'].map((item, i) => (
+                  {t.intelligence.project1Items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -201,11 +201,11 @@ const InteligenciaMercado = () => {
               {/* Brand Strategy & Posicionamento */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
-                  Brand Strategy & Posicionamento
+                  {t.intelligence.project2Title}
                 </h3>
-                <h4 className="text-base font-medium mb-4 text-foreground">Posicionamento e Branding</h4>
+                <h4 className="text-base font-medium mb-4 text-foreground">{t.intelligence.project2Subtitle}</h4>
                 <ul className="space-y-3">
-                  {['Teste de Conceito', 'Precificação (PSM, BPTO, Conjoint)', 'Avaliação da percepção e imagem da marca (Brand Equity)', 'Reposicionamento de produtos e soluções agro (Value Map)', 'ROI de Feiras (Retorno sobre o Investimento em Feiras)'].map((item, i) => (
+                  {t.intelligence.project2Items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -220,11 +220,11 @@ const InteligenciaMercado = () => {
               {/* Estratégia de Mercado & Go-to-Market */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
-                  Estratégia de Mercado & Go-to-Market
+                  {t.intelligence.project3Title}
                 </h3>
-                <h4 className="text-base font-medium mb-4 text-foreground">Estudos de Mercado / GTM - Go to Market</h4>
+                <h4 className="text-base font-medium mb-4 text-foreground">{t.intelligence.project3Subtitle}</h4>
                 <ul className="space-y-3">
-                  {['Dimensionamento e Identificação de nichos de mercados potenciais', 'Estratégias de entrada em novas regiões', 'Avaliação de Canais e estrutura de Distribuição', 'Monitoramento regional de demanda por insumos', 'Análise da concorrência regional em insumos e maquinário', 'Mapeamento de potencial de vendas – VPM Predict Geo'].map((item, i) => (
+                  {t.intelligence.project3Items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -236,11 +236,11 @@ const InteligenciaMercado = () => {
               {/* Inteligência Estratégica & Foresight */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6 text-primary">
-                  Inteligência Estratégica & Foresight
+                  {t.intelligence.project4Title}
                 </h3>
-                <h4 className="text-base font-medium mb-4 text-foreground">Consultoria Estratégica</h4>
+                <h4 className="text-base font-medium mb-4 text-foreground">{t.intelligence.project4Subtitle}</h4>
                 <ul className="space-y-3">
-                  {['Diagnóstico estratégico do ambiente competitivo do agro', 'Cenários de foresight: antecipação de riscos e oportunidades', 'Inteligência antecipativa baseada em modelos ontológicos', 'Avaliação estratégica de novos negócios no agro', 'Inteligência comercial orientada por mapas de significado do cliente', 'Implantação de estruturas internas de inteligência de mercado'].map((item, i) => (
+                  {t.intelligence.project4Items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -253,10 +253,10 @@ const InteligenciaMercado = () => {
             {/* Intermediate paragraph - Pesquisa de Mercado */}
             <div className="max-w-4xl mx-auto text-center mb-12">
               <h3 className="text-2xl font-heading font-semibold text-foreground mb-4">
-                Pesquisa de Mercado
+                {t.intelligence.researchTitle}
               </h3>
               <p className="text-muted-foreground text-lg">
-                Realizamos pesquisas de mercado qualitativas e quantitativas, com foco em lançamentos, performance de produtos, satisfação do cliente e análise de canais de distribuição. Exemplos:
+                {t.intelligence.researchDesc}
               </p>
             </div>
 
@@ -265,10 +265,10 @@ const InteligenciaMercado = () => {
               {/* Pesquisas Qualitativas */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6">
-                  Pesquisas Qualitativas
+                  {t.intelligence.qualitativeTitle}
                 </h3>
                 <ul className="space-y-3">
-                  {['Focus Group', 'Pesquisa em Profundidade (IDIs)', 'Cliente oculto (Mystery shopping)', 'Café da manhã com produtores'].map((item, i) => (
+                  {t.intelligence.qualitativeItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
@@ -280,10 +280,10 @@ const InteligenciaMercado = () => {
               {/* Pesquisas Quantitativas */}
               <div className="bg-card rounded-2xl p-8 shadow-subtle">
                 <h3 className="text-xl font-heading font-semibold mb-6">
-                  Pesquisas Quantitativas
+                  {t.intelligence.quantitativeTitle}
                 </h3>
                 <ul className="space-y-3">
-                  {['Lançamento de Novos Produtos', 'Satisfação de Clientes - (NPS)', 'Tracking de Preços', 'Estudo em Distribuidores', 'Pesquisa Relâmpago'].map((item, i) => (
+                  {t.intelligence.quantitativeItems.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-medium mt-0.5 shrink-0" />
                       <span>{item}</span>
