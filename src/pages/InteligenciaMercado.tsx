@@ -17,10 +17,10 @@ const InteligenciaMercado = () => {
   ];
 
   const araiSteps = [
-    { step: '1', title: t.intelligence.step1, items: ['Briefing (NLP Analysis)', 'Design (Narrative AI)'] },
-    { step: '2', title: t.intelligence.step2, items: ['Primária (AI-powered)', 'Secundária (Scraping)'] },
-    { step: '3', title: t.intelligence.step3, items: ['ETL & Data Lake', 'Feature Engineering'] },
-    { step: '4', title: t.intelligence.step4, items: ['Análise (AI-Driven)', 'Resultados (AI-Results)'] },
+    { step: '1', title: t.intelligence.step1, items: t.intelligence.step1Items },
+    { step: '2', title: t.intelligence.step2, items: t.intelligence.step2Items },
+    { step: '3', title: t.intelligence.step3, items: t.intelligence.step3Items },
+    { step: '4', title: t.intelligence.step4, items: t.intelligence.step4Items },
   ];
 
   return (
