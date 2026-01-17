@@ -33,7 +33,7 @@ const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/sa_intecom"
+                href="https://www.instagram.com/sa_intercom"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
@@ -95,8 +95,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
-                <a href="https://api.whatsapp.com/send?phone=5511996059833" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                  +55 11 99605-9833
+                <a href="https://api.whatsapp.com/send?phone=5511921001112" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                  +55 11 92100-1112
                 </a>
               </div>
             </div>
