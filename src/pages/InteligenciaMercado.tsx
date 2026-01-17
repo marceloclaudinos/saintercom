@@ -37,10 +37,6 @@ const InteligenciaMercado = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/30" />
           </div>
           
-          {/* Leaf Logo - Top right, smaller */}
-          <div className="absolute right-8 top-28 opacity-15 pointer-events-none">
-            <img src={leafLogo} alt="" className="w-32 h-auto" />
-          </div>
           
           <div className="container-wide relative z-10 pt-24">
             <div className="max-w-4xl">
@@ -156,7 +152,7 @@ const InteligenciaMercado = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-5xl md:text-6xl font-heading font-bold mb-3">
+                  <div className={`font-heading font-bold mb-3 ${benefit.value === '∞' ? 'text-6xl md:text-7xl' : 'text-5xl md:text-6xl'}`}>
                     {benefit.value}
                   </div>
                   <p className="text-primary-foreground/90 text-lg font-medium">
