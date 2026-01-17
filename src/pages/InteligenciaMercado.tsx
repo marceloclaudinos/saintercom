@@ -151,9 +151,11 @@ const InteligenciaMercado = () => {
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className={`font-heading font-bold mb-3 ${benefit.value === '∞' ? 'text-7xl md:text-8xl' : 'text-5xl md:text-6xl'}`}>
-                    {benefit.value}
+                <div key={index} className="text-center flex flex-col items-center">
+                  <div className="h-20 md:h-24 flex items-center justify-center">
+                    <span className="text-5xl md:text-6xl font-heading font-bold">
+                      {benefit.value}
+                    </span>
                   </div>
                   <p className="text-primary-foreground/90 text-lg font-medium">
                     {benefit.label}
