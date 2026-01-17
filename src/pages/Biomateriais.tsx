@@ -146,7 +146,7 @@ const Biomateriais = () => {
         {/* CTA */}
         <section className="section-padding bg-secondary/30 relative overflow-hidden">
           {/* Large leaf background on left side */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 opacity-20 pointer-events-none">
+          <div className="absolute left-8 md:left-16 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
             <img src={leafLogo} alt="" className="w-80 md:w-96 h-auto" />
           </div>
           

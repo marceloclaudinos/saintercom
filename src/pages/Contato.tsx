@@ -55,7 +55,7 @@ const Contato = () => {
   const contactInfo = [
     { icon: MapPin, label: 'São Paulo, SP - Brasil', isImage: false },
     { icon: Mail, label: 'contato@saintercom.com.br', href: 'mailto:contato@saintercom.com.br', isImage: false },
-    { icon: whatsappIcon, label: '+55 11 99605-9833', href: 'https://api.whatsapp.com/send?phone=5511996059833', isImage: true },
+    { icon: whatsappIcon, label: '+55 11 92100-1112', href: 'https://api.whatsapp.com/send?phone=5511921001112', isImage: true },
   ];
 
   return (
